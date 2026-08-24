@@ -6,7 +6,7 @@
       "lng": 103.635,
       "summary": "A 1,200-bed dormitory serving the Tuas industrial belt, with dedicated recreation decks and on-site security. The dormitory comes with cooking facilities for residences to use.",
       "name": "Tuas Seatown Dormitory",
-      "mapQuery": "Tuas South Avenue, Singapore",
+      "mapQuery": "69H Tuas South Avenue 1, Singapore",
       "capacityScale": 9,
       "communalFacilities": [
         "24hr Security & CCTV",
@@ -51,7 +51,7 @@
       "lng": 103.87631,
       "summary": "A newer-generation dormitory in central Singapore, built to the new regulations with all ensuite bedrooms.",
       "name": "Tannery Lodge I & II",
-      "mapQuery": "Macpherson, Singapore",
+      "mapQuery": "31 Tannery Lane",
       "capacityScale": 6,
       "communalFacilities": [
         "24hr Security & CCTV",
