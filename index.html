@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>D Wall — Purpose-Built Worker Dormitories, Singapore</title>
 <meta name="description" content="D Wall develops and operates purpose-built dormitories for Singapore's workforce, with affiliated backpacker hostels under TWL Hospitality.">
-<link rel="stylesheet" href="css/styles.css?v=12">
+<link rel="stylesheet" href="css/styles.css?v=14">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 </head>
 <body>
@@ -50,10 +50,11 @@
     </div>
 
     <div class="hero-stats-bar">
-      <div class="hero-stat-inline"><span class="num">5</span><span class="cap">Dormitories Operational</span></div>
+      <div class="hero-stat-inline"><span class="num">5</span><span class="cap">Dwall Dormitories</span></div>
       <div class="hero-stat-inline"><span class="num">10,000+</span><span class="cap">Dorm Beds</span></div>
       <div class="hero-stat-inline"><span class="num">5</span><span class="cap">TWL Hospitality Hostels</span></div>
-      <div class="hero-stat-inline"><span class="num">350+</span><span class="cap">Hostels Beds</span></div>
+      <div class="hero-stat-inline"><span class="num">300+</span><span class="cap">Hostel Beds</span></div>
+
     </div>
   </div>
 </header>
@@ -239,9 +240,9 @@
   </div>
 </footer>
 
-<script src="js/site-config.js?v=11"></script>
-<script src="js/load-content.js?v=11"></script>
-<script src="js/main.js?v=11"></script>
+<script src="js/site-config.js?v=14"></script>
+<script src="js/load-content.js?v=14"></script>
+<script src="js/main.js?v=14"></script>
 <script>
 window.CONTENT_READY.then(function(){
   function dormCardHTML(d, i){
@@ -291,8 +292,13 @@ window.CONTENT_READY.then(function(){
   ).join("");
 
   // ---- Hero image slider (fills the space next to the hero copy) ----
+  // Photos come from content/hero.json (managed in the CMS under
+  // "Homepage" → "Hero Photo Slider"), independent of any dormitory's
+  // own gallery. Falls back to dormitory photos only if that's empty.
   (function(){
-    const images = DORMITORIES.flatMap(d => d.gallery && d.gallery.length ? d.gallery.slice(0, 2) : [d.heroImage]);
+    const images = (HERO_IMAGES && HERO_IMAGES.length)
+      ? HERO_IMAGES
+      : DORMITORIES.flatMap(d => d.gallery && d.gallery.length ? d.gallery.slice(0, 2) : [d.heroImage]);
     const slidesEl = document.getElementById("hero-slides");
     const dotsEl = document.getElementById("hero-slider-dots");
     if(!slidesEl || !images.length) return;
@@ -329,6 +335,6 @@ window.CONTENT_READY.then(function(){
 }); // end CONTENT_READY.then
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="js/site-map.js?v=12"></script>
+<script src="js/site-map.js?v=14"></script>
 </body>
 </html>
