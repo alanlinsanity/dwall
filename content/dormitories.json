@@ -1,129 +1,100 @@
 {
   "dormitories": [
     {
-      "id": "tuas-view-lodge",
-      "lat": 1.2966,
+      "yearBuilt": "-",
+      "heroImage": "/content/uploads/hf_20260824_070901_607d7c40-2018-4f64-98d2-a9a876977834.png",
       "lng": 103.635,
-      "name": "Tuas View Lodge",
-      "location": "Tuas South, Singapore",
-      "beds": 4200,
-      "status": "available",
-      "availableBeds": 340,
+      "summary": "A 1,200-bed dormitory serving the Tuas industrial belt, with dedicated recreation decks and on-site security. The dormitory comes with cooking facilities for residences to use.",
+      "name": "Tuas Seatown Dormitory",
+      "mapQuery": "Tuas South Avenue, Singapore",
       "capacityScale": 9,
-      "roomTypes": "8 & 12-bed rooms",
-      "yearBuilt": "2019",
-      "distance": "6 min to Tuas Checkpoint",
-      "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop"
+      "communalFacilities": [
+        "24hr Security & CCTV",
+        "On-site Sick Bay",
+        "Kitchens",
+        "Showers",
+        "Convenience Mart (Nearby)",
+        "Prayer Room",
+        "Recreation Courtyard"
       ],
-      "summary": "A 4,200-bed purpose-built dormitory serving the Tuas industrial belt, with dedicated recreation decks and on-site medical support.",
+      "beds": 1200,
+      "gallery": [
+        "/content/uploads/hf_20260824_070901_1ce05c4f-7ac5-4dcf-87c7-7a09d3994bd7.png",
+        "/content/uploads/hf_20260824_070423_1a327399-7ffa-4485-b0d6-61b6e7f42ef7.png",
+        "/content/uploads/hf_20260824_070442_e5950698-6e58-43e9-b28f-9b44c3cfd466.png"
+      ],
+      "status": "waitlist",
+      "location": "Tuas South Ave 1, Singapore",
+      "distance": "6 min to Tuas Checkpoint",
       "writeup": [
-        "Tuas View Lodge was purpose-built to house workers from the surrounding marine and heavy industrial cluster, with direct shuttle access to major yards along Tuas South Avenue.",
-        "Every block is organised around a central recreation courtyard, with cross-ventilated rooms, dedicated cooking decks, and a 24-hour on-site management office.",
+        "Tuas Seatown Dormitory was designed to house workers from the surrounding marine and heavy industrial cluster, with easy access to major yards along Tuas South Avenue.",
+        "Every block is organised around a central recreation courtyard, with cross-ventilated rooms, dedicated cooking decks, and a 24-hour on-site security.",
         "The dormitory operates under a structured welfare framework, with regular facility audits and a resident feedback channel managed directly by our operations team."
       ],
-      "roomAmenities": [
-        "Bunk bed with mattress & pillow",
-        "Personal storage locker",
-        "Ceiling fan",
-        "Individual power socket",
-        "Window with natural ventilation"
-      ],
-      "communalFacilities": [
-        "24hr security & CCTV",
-        "On-site sick bay",
-        "Wet & dry kitchens",
-        "Laundry decks",
-        "Convenience mart",
-        "Prayer room",
-        "Recreation courtyard",
-        "Free shuttle to worksites"
-      ],
-      "mapQuery": "Tuas South Avenue, Singapore",
+      "id": "tuas-seatown-dormitory",
       "vrTourUrl": "",
-      "videoTourUrl": ""
+      "availableBeds": 0,
+      "roomAmenities": [
+        "Bunk Bed with board",
+        "Personal Locker",
+        "Ceiling Fans",
+        "Individual Power Socket",
+        "Window with Natural Ventilation"
+      ],
+      "videoTourUrl": "",
+      "roomTypes": "8 & 12-bed rooms",
+      "lat": 1.3143599591546382
     },
     {
-      "id": "senoko-crescent-dorm",
-      "lat": 1.45,
-      "lng": 103.788,
-      "name": "Senoko Crescent Dormitory",
-      "location": "Senoko, Singapore",
-      "beds": 2800,
-      "status": "waitlist",
-      "availableBeds": 0,
+      "yearBuilt": "2025",
+      "heroImage": "/content/uploads/tl1.webp",
+      "lng": 103.87631,
+      "summary": "A newer-generation dormitory in central Singapore, built to the new regulations with all ensuite bedrooms.",
+      "name": "Tannery Lodge I & II",
+      "mapQuery": "Macpherson, Singapore",
       "capacityScale": 6,
-      "roomTypes": "6 & 10-bed rooms",
-      "yearBuilt": "2021",
-      "distance": "10 min to Woodlands Checkpoint",
-      "heroImage": "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1600&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop"
-      ],
-      "summary": "A newer-generation dormitory in the north, built around larger communal spaces and improved room ventilation standards.",
-      "writeup": [
-        "Senoko Crescent Dormitory opened in 2021 and reflects the latest generation of purpose-built worker housing, with wider corridors, larger windows and upgraded fire-safety systems throughout.",
-        "The site sits close to the Senoko industrial estate and offers scheduled shuttle routes to nearby manufacturing and logistics employers.",
-        "A dedicated welfare officer is based on site to coordinate resident matters, medical referrals and dormitory administration."
-      ],
-      "roomAmenities": [
-        "Bunk bed with mattress & pillow",
-        "Personal storage locker",
-        "Ceiling fan",
-        "Individual power socket",
-        "Wider windows for cross-ventilation"
-      ],
       "communalFacilities": [
-        "24hr security & CCTV",
-        "On-site clinic visits (weekly)",
-        "Wet & dry kitchens",
-        "Laundry decks",
-        "Convenience mart",
-        "Multi-purpose hall",
-        "Outdoor gym corner",
-        "Free shuttle to worksites"
+        "24hr Security & CCTV",
+        "Elevator",
+        "Minimart & Beer Garden",
+        "Pickleball Court",
+        "Multi-Purpose Room",
+        "Gym"
       ],
-      "mapQuery": "Senoko, Singapore",
-      "vrTourUrl": "",
-      "videoTourUrl": ""
+      "beds": 2000,
+      "gallery": [
+        "/content/uploads/tl2.webp",
+        "/content/uploads/tl3.webp",
+        "/content/uploads/tl4.webp"
+      ],
+      "status": "waitlist",
+      "location": "Tannery Lane",
+      "distance": "10 min to Matter MRT",
+      "writeup": [
+        "Tannery Lodge I & II opened in 2025 and reflects the latest generation of purpose-built worker housing, with ensuite toilets in all rooms.",
+        "The site sits within the Macpherson industrial estate and offers great connectivity to job sites around Singapore."
+      ],
+      "id": "tannery-lodge",
+      "vrTourUrl": "https://discover.matterport.com/space/YmhnHEUL1KJ",
+      "availableBeds": -1,
+      "roomAmenities": [
+        "Bunk Bed with board",
+        "Personal Locker",
+        "Ceiling Fan / Aircon",
+        "Individual Power Socket"
+      ],
+      "videoTourUrl": "",
+      "roomTypes": "8 to 12 pax rooms",
+      "lat": 1.3286973318792343
     },
     {
-      "id": "jurong-central-block",
-      "lat": 1.333,
-      "lng": 103.707,
-      "name": "Jurong Central Block",
-      "location": "Jurong Industrial Estate, Singapore",
-      "beds": 3500,
-      "status": "full",
-      "availableBeds": 0,
-      "capacityScale": 7.5,
-      "roomTypes": "8-bed rooms",
       "yearBuilt": "2017",
-      "distance": "5 min to Jurong Port",
       "heroImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1600&auto=format&fit=crop",
-      "gallery": [
-        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1571508601891-ca5e7a713859?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1522771930-78848d9293e8?q=80&w=800&auto=format&fit=crop"
-      ],
+      "lng": 103.707,
       "summary": "One of our earlier developments, fully upgraded in 2023 with new kitchen decks and expanded recreation space.",
-      "writeup": [
-        "Jurong Central Block has housed workers from the surrounding port and processing industries since 2017, and underwent a full facilities upgrade in 2023.",
-        "The refurbishment added a second recreation deck, expanded wet-kitchen capacity, and replaced all room lighting and ventilation fittings.",
-        "Its location places most major Jurong-area worksites within a short shuttle ride, reducing daily commute time for residents."
-      ],
-      "roomAmenities": [
-        "Bunk bed with mattress & pillow",
-        "Personal storage locker",
-        "Ceiling fan",
-        "Individual power socket",
-        "Upgraded LED lighting (2023)"
-      ],
+      "name": "Jurong Central Block",
+      "mapQuery": "Jurong Industrial Estate, Singapore",
+      "capacityScale": 7.5,
       "communalFacilities": [
         "24hr security & CCTV",
         "On-site sick bay",
@@ -134,9 +105,33 @@
         "Two recreation decks",
         "Free shuttle to worksites"
       ],
-      "mapQuery": "Jurong Industrial Estate, Singapore",
+      "beds": 3500,
+      "gallery": [
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1571508601891-ca5e7a713859?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1522771930-78848d9293e8?q=80&w=800&auto=format&fit=crop"
+      ],
+      "status": "full",
+      "location": "Jurong Industrial Estate, Singapore",
+      "distance": "5 min to Jurong Port",
+      "writeup": [
+        "Jurong Central Block has housed workers from the surrounding port and processing industries since 2017, and underwent a full facilities upgrade in 2023.",
+        "The refurbishment added a second recreation deck, expanded wet-kitchen capacity, and replaced all room lighting and ventilation fittings.",
+        "Its location places most major Jurong-area worksites within a short shuttle ride, reducing daily commute time for residents."
+      ],
+      "id": "jurong-central-block",
       "vrTourUrl": "",
-      "videoTourUrl": ""
+      "availableBeds": 0,
+      "roomAmenities": [
+        "Bunk bed with mattress & pillow",
+        "Personal storage locker",
+        "Ceiling fan",
+        "Individual power socket",
+        "Upgraded LED lighting (2023)"
+      ],
+      "videoTourUrl": "",
+      "roomTypes": "8-bed rooms",
+      "lat": 1.333
     }
   ]
 }
