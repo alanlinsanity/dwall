@@ -5,7 +5,7 @@ window.CONTENT_READY.then(function(){
   const map = L.map("site-map", {
     scrollWheelZoom: false,
     zoomControl: true
-  }).setView([1.345, 103.79], 11);
+  }).setView([1.345, 103.79], 10);
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
