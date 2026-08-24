@@ -16,6 +16,7 @@ window.CONTENT_READY = (async function loadContent(){
   // version." The timestamp query param plus cache:"no-store" forces
   // a fresh network request every time.
   const v = Date.now();
+  window.IMG_CACHE_BUST = v; // reused below to bust image caching too
   const base = "content/";
   try{
     const [dormRes, hostelRes, projRes, teamRes] = await Promise.all([

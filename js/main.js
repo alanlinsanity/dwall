@@ -4,6 +4,16 @@ function getParam(name){
   return new URLSearchParams(window.location.search).get(name);
 }
 
+// Appends a cache-busting param to a content image URL so the browser
+// always fetches it fresh on every page load, rather than potentially
+// reusing a broken/incomplete cached copy of a large image file.
+// Leave external URLs (Unsplash, etc.) alone if not needed — safe either way.
+function bustImg(url){
+  if(!url) return url;
+  const sep = url.includes("?") ? "&" : "?";
+  return url + sep + "_cb=" + (window.IMG_CACHE_BUST || Date.now());
+}
+
 // Renders the key-stat chip used on dormitory cards (e.g. "4,200 beds").
 function specPlateHTML(indexNo, value, labelText){
   return `<div class="spec-plate">
