@@ -23,6 +23,20 @@ display_url: https://dwall.sg
 logo_url: /assets/logo.png
 
 collections:
+  # ---------------- HOMEPAGE ----------------
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "hero"
+        label: "Hero Photo Slider"
+        file: "content/hero.json"
+        description: "Photos shown in the rotating slider on the homepage. Independent of any dormitory's own gallery — add, remove, or reorder freely."
+        fields:
+          - label: "Hero photos"
+            name: "heroImages"
+            widget: "list"
+            field: { label: "Photo", name: "image", widget: "image" }
+
   # ---------------- DORMITORIES ----------------
   - name: "dormitories"
     label: "Workers' Dormitories"
