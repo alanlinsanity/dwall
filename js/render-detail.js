@@ -144,4 +144,9 @@ window.CONTENT_READY.then(function(){
       </div>
     </div>
   `;
+
+  // The gallery / fact-row / tour-grid above are created fresh here, after
+  // DOMContentLoaded already ran the page's "fade in on scroll" setup once —
+  // so that setup missed them. Re-run it now that they actually exist.
+  initRevealOnScroll();
 });
