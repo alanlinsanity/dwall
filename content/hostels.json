@@ -1,94 +1,93 @@
 {
   "hostels": [
     {
-      "id": "beary-good-hostel-bugis",
-      "lat": 1.3006,
-      "lng": 103.856,
-      "name": "A Beary Good Hostel — Bugis",
-      "location": "Bugis, Singapore",
       "heroImage": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200&auto=format&fit=crop",
-      "summary": "Our flagship backpacker hostel, steps from Bugis Street and the Kampong Glam heritage district.",
-      "writeup": [
-        "Our flagship TWL Hospitality property sits in the heart of Bugis, a short walk from Kampong Glam, Haji Lane and the Bugis MRT interchange.",
-        "Dorm and private rooms are designed for independent travellers, with a shared kitchen, lounge and rooftop common area for guests to meet."
-      ],
       "facilities": [
         "Free Wi-Fi",
-        "Shared kitchen",
-        "Rooftop common area",
-        "24hr reception",
+        "Rooftop",
+        "Reception",
         "Lockers",
-        "Laundry service"
+        "Laundry"
       ],
+      "lng": 103.856,
+      "summary": "Our flagship backpacker hostel, steps from Bugis Street and the Kampong Glam heritage district.",
+      "name": "Beary Best! Hostel — Kampong Glam",
       "mapQuery": "Bugis, Singapore",
-      "website": "https://twlhospitality.com"
+      "location": "Kampong Glam",
+      "writeup": [
+        "Our TWL Hospitality capsule property sits in the heart of Bugis, a short walk from Kampong Glam, Haji Lane and the Bugis MRT interchange.",
+        "Dorms and private rooms are designed for independent / group travellers, with a shared rooftop common area for guests to mingle."
+      ],
+      "website": "https://twlhospitality.com",
+      "id": "beary-best-kampong-glam",
+      "lat": 1.3006
     },
     {
-      "id": "beary-good-hostel-chinatown",
-      "lat": 1.283,
-      "lng": 103.844,
-      "name": "A Beary Good Hostel — Chinatown",
-      "location": "Chinatown, Singapore",
       "heroImage": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1200&auto=format&fit=crop",
+      "facilities": [
+        "Free Wi-Fi",
+        "Shared Pantry",
+        "Lounge",
+        "Reception",
+        "Lockers"
+      ],
+      "lng": 103.844,
       "summary": "A conservation shophouse conversion in the heart of Chinatown, close to Maxwell Food Centre.",
+      "name": "Beary Best! Hostel — Chinatown",
+      "mapQuery": "Chinatown, Singapore",
+      "location": "Chinatown, Singapore",
       "writeup": [
         "Housed in a restored conservation shophouse, this hostel blends heritage architecture with modern dorm and ensuite room options.",
         "Guests are a two-minute walk from Maxwell Food Centre and the Chinatown MRT station, with easy access to the CBD."
       ],
-      "facilities": [
-        "Free Wi-Fi",
-        "Shared kitchen",
-        "Heritage shophouse setting",
-        "24hr reception",
-        "Lockers"
-      ],
-      "mapQuery": "Chinatown, Singapore",
-      "website": "https://twlhospitality.com"
+      "website": "https://twlhospitality.com",
+      "id": "beary-best-chinatown",
+      "lat": 1.283
     },
     {
-      "id": "beary-good-hostel-lavender",
-      "lat": 1.307,
-      "lng": 103.863,
-      "name": "A Beary Good Hostel — Lavender",
-      "location": "Lavender, Singapore",
       "heroImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200&auto=format&fit=crop",
-      "summary": "A quieter, budget-friendly base near Lavender MRT with easy access to the city and Kallang riverside.",
+      "facilities": [
+        "Free Wi-Fi",
+        "Shared Pantry",
+        "Common Lounge",
+        "Reception",
+        "Lockers",
+        "Laundry"
+      ],
+      "lng": 103.863,
+      "summary": "A quieter, budget-friendly base near Bendemeer & Boon Keng MRT with easy access to the city and Kallang riverside.",
+      "name": "Beary Best! Hostel — Lavender",
+      "mapQuery": "Lavender, Singapore",
+      "location": "Lavender, Singapore",
       "writeup": [
-        "Our Lavender property is a favourite with longer-stay guests, offering a calmer neighbourhood setting a few minutes from Lavender MRT.",
+        "Our Lavender property is a favourite with longer-stay guests, offering a calmer neighbourhood setting a few minutes from Boon Keng and Bendemeer MRT.",
         "The Kallang Riverside and city centre are both a short ride away, making it a practical base for both leisure and work travel."
       ],
-      "facilities": [
-        "Free Wi-Fi",
-        "Shared kitchen",
-        "Common lounge",
-        "24hr reception",
-        "Lockers",
-        "Laundry service"
-      ],
-      "mapQuery": "Lavender, Singapore",
-      "website": "https://twlhospitality.com"
+      "website": "https://twlhospitality.com",
+      "id": "beary-best-lavender",
+      "lat": 1.307
     },
     {
-      "id": "beary-good-hostel-geylang",
-      "lat": 1.314,
-      "lng": 103.883,
-      "name": "A Beary Good Hostel — Geylang",
-      "location": "Geylang, Singapore",
       "heroImage": "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?q=80&w=1200&auto=format&fit=crop",
-      "summary": "Our most affordable property, popular with long-stay guests exploring Singapore's eastern food scene.",
-      "writeup": [
-        "Set along Geylang's famed food street, this property is our most budget-conscious offering and a favourite for long-stay and returning guests.",
-        "It's a short ride from Changi Airport and the eastern coastal parks, with some of Singapore's best-loved hawker fare on the doorstep."
-      ],
       "facilities": [
         "Free Wi-Fi",
-        "Shared kitchen",
-        "24hr reception",
+        "Shared Kitchen",
+        "Reception",
         "Lockers",
-        "Long-stay rates"
+        "Laundry"
       ],
-      "mapQuery": "Geylang, Singapore",
-      "website": "https://twlhospitality.com"
+      "lng": 103.883,
+      "summary": "Our upscale hostel asset, popular with tourist exploring Singapore and visiting for MICE.",
+      "name": "Futura Boutique Hostel",
+      "mapQuery": "Outram, Singapore",
+      "location": "Outram, Singapore",
+      "writeup": [
+        "Located within minutes walk to Havelock MRT, this hostel provides easy access to many of Singapore's tourist hotspots.",
+        "Within minutes walk to Tiong Bahru Market, one of Singapore's hipster town with pre-war conservation architecture."
+      ],
+      "website": "https://twlhospitality.com",
+      "id": "futura-boutique-hostel",
+      "lat": 1.314
     }
   ]
 }
