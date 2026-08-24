@@ -5,7 +5,7 @@ window.CONTENT_READY.then(function(){
   const map = L.map("site-map", {
     scrollWheelZoom: false,
     zoomControl: true
-  }).setView([1.345, 103.79], 8);
+  }).setView([1.345, 103.79], 10);
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -48,6 +48,6 @@ window.CONTENT_READY.then(function(){
   if(typeof HOSTELS !== "undefined") HOSTELS.forEach(h => addPin(h, "hostel"));
 
   if(bounds.length){
-    map.fitBounds(bounds, { padding: [36, 36], maxZoom: 13 });
+    map.fitBounds(bounds, { padding: [36, 36], maxZoom: 12 });
   }
 });
