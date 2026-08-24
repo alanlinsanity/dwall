@@ -10,13 +10,19 @@
    the *loading* mechanism changed, not how the data is shaped or used. */
 
 window.CONTENT_READY = (async function loadContent(){
+  // Cache-bust every load: a plain fetch() can be served from the
+  // browser's HTTP cache even after new content is deployed, which is
+  // the #1 cause of "I edited it but the site still shows the old
+  // version." The timestamp query param plus cache:"no-store" forces
+  // a fresh network request every time.
+  const v = Date.now();
   const base = "content/";
   try{
     const [dormRes, hostelRes, projRes, teamRes] = await Promise.all([
-      fetch(base + "dormitories.json"),
-      fetch(base + "hostels.json"),
-      fetch(base + "projects.json"),
-      fetch(base + "team.json")
+      fetch(base + "dormitories.json?v=" + v, { cache: "no-store" }),
+      fetch(base + "hostels.json?v=" + v, { cache: "no-store" }),
+      fetch(base + "projects.json?v=" + v, { cache: "no-store" }),
+      fetch(base + "team.json?v=" + v, { cache: "no-store" })
     ]);
     const [dorm, hostel, proj, team] = await Promise.all([
       dormRes.json(), hostelRes.json(), projRes.json(), teamRes.json()
