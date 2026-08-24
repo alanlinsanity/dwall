@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Team | D Wall</title>
 <meta name="description" content="Meet the team behind D Wall's dormitory operations and TWL Hospitality's hostel portfolio.">
-<link rel="stylesheet" href="css/styles.css?v=9">
+<link rel="stylesheet" href="css/styles.css?v=11">
 </head>
 <body>
 
@@ -117,15 +117,15 @@
   </div>
 </footer>
 
-<script src="js/site-config.js?v=9"></script>
-<script src="js/load-content.js?v=9"></script>
-<script src="js/main.js?v=9"></script>
+<script src="js/site-config.js?v=11"></script>
+<script src="js/load-content.js?v=11"></script>
+<script src="js/main.js?v=11"></script>
 <script>
 window.CONTENT_READY.then(function(){
   function teamCardHTML(m){
     return `<div class="card team-card">
       <div class="body" style="align-items:center;">
-        <div class="photo"><img src="${m.photo}" alt="${m.name}"></div>
+        <div class="photo"><img src="${bustImg(m.photo)}" alt="${m.name}"></div>
         <h3>${m.name}</h3>
         <span class="role">${m.role}</span>
         <p class="bio">${m.bio}</p>

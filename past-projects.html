@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Past Projects | D Wall</title>
 <meta name="description" content="A look at D Wall's development track record — ground-up builds, refurbishments and adaptive reuse projects.">
-<link rel="stylesheet" href="css/styles.css?v=9">
+<link rel="stylesheet" href="css/styles.css?v=11">
 </head>
 <body>
 
@@ -90,9 +90,9 @@
   </div>
 </div>
 
-<script src="js/site-config.js?v=9"></script>
-<script src="js/load-content.js?v=9"></script>
-<script src="js/main.js?v=9"></script>
+<script src="js/site-config.js?v=11"></script>
+<script src="js/load-content.js?v=11"></script>
+<script src="js/main.js?v=11"></script>
 <script>
 window.CONTENT_READY.then(function(){
   const tags = ["All", ...new Set(PROJECTS.map(p => p.tag))];
@@ -116,7 +116,7 @@ window.CONTENT_READY.then(function(){
     document.getElementById("project-grid").innerHTML = items.map(p => `
       <div class="card project-card" data-open="${p.id}" style="cursor:pointer;">
         <div class="thumb">
-          <img src="${p.image}" alt="${p.name}">
+          <img src="${bustImg(p.image)}" alt="${p.name}">
           <span class="pin">${p.year}</span>
         </div>
         <div class="body">
@@ -135,7 +135,7 @@ window.CONTENT_READY.then(function(){
     const p = PROJECTS.find(x => x.id === id);
     if(!p) return;
     document.getElementById("lightbox-inner").innerHTML = `
-      <img src="${p.image}" alt="${p.name}">
+      <img src="${bustImg(p.image)}" alt="${p.name}">
       <div class="inner">
         <span class="index-label">${p.tag} · ${p.year}</span>
         <h2 style="margin-top:12px;">${p.name}</h2>

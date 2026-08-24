@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>D Wall — Purpose-Built Worker Dormitories, Singapore</title>
 <meta name="description" content="D Wall develops and operates purpose-built dormitories for Singapore's workforce, with affiliated backpacker hostels under TWL Hospitality.">
-<link rel="stylesheet" href="css/styles.css?v=9">
+<link rel="stylesheet" href="css/styles.css?v=11">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 </head>
 <body>
@@ -53,33 +53,6 @@
       <div class="hero-stat-inline"><span class="num">3</span><span class="cap">Dormitories operated</span></div>
       <div class="hero-stat-inline"><span class="num">10,500+</span><span class="cap">Beds under management</span></div>
       <div class="hero-stat-inline"><span class="num">4</span><span class="cap">TWL Hospitality hostels</span></div>
-    </div>
-
-    <div class="hero-media bracket">
-      <div class="grid-overlay"></div>
-      <span class="bl"></span><span class="br"></span>
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" alt="Dormitory exterior">
-      <span class="tag">Tuas View Lodge — our largest development to date</span>
-    </div>
-
-    <div class="availability-widget reveal">
-      <form id="availability-form">
-        <div class="aw-field">
-          <label for="aw-property">Property</label>
-          <select id="aw-property" name="property">
-            <option value="">All dormitories</option>
-          </select>
-        </div>
-        <div class="aw-field">
-          <label for="aw-movein">Move-in date</label>
-          <input type="date" id="aw-movein" name="movein">
-        </div>
-        <div class="aw-field">
-          <label for="aw-headcount">Headcount</label>
-          <input type="number" id="aw-headcount" name="headcount" min="1" placeholder="e.g. 40">
-        </div>
-        <button type="submit" class="btn btn-primary aw-submit">Check availability <span class="btn-arrow">→</span></button>
-      </form>
     </div>
   </div>
 </header>
@@ -265,15 +238,15 @@
   </div>
 </footer>
 
-<script src="js/site-config.js?v=9"></script>
-<script src="js/load-content.js?v=9"></script>
-<script src="js/main.js?v=9"></script>
+<script src="js/site-config.js?v=11"></script>
+<script src="js/load-content.js?v=11"></script>
+<script src="js/main.js?v=11"></script>
 <script>
 window.CONTENT_READY.then(function(){
   function dormCardHTML(d, i){
     return `<a class="card" href="detail.html?type=dormitory&id=${d.id}">
       <div class="thumb">
-        <img src="${d.heroImage}" alt="${d.name}">
+        <img src="${bustImg(d.heroImage)}" alt="${d.name}">
         <span class="pin">${d.location}</span>
       </div>
       <div class="body">
@@ -291,7 +264,7 @@ window.CONTENT_READY.then(function(){
   function projectCardHTML(p){
     return `<div class="card project-card">
       <div class="thumb">
-        <img src="${p.image}" alt="${p.name}">
+        <img src="${bustImg(p.image)}" alt="${p.name}">
         <span class="pin">${p.year}</span>
       </div>
       <div class="body">
@@ -313,7 +286,7 @@ window.CONTENT_READY.then(function(){
   document.getElementById("project-grid").innerHTML = PROJECTS.slice(0,3).map(projectCardHTML).join("");
   document.getElementById("trust-grid").innerHTML = TRUST_POINTS.map(trustItemHTML).join("");
   document.getElementById("hostel-photo-grid").innerHTML = HOSTELS.slice(0,4).map(h =>
-    `<a href="detail.html?type=hostel&id=${h.id}" class="hostel-photo"><img src="${h.heroImage}" alt="${h.name}"></a>`
+    `<a href="detail.html?type=hostel&id=${h.id}" class="hostel-photo"><img src="${bustImg(h.heroImage)}" alt="${h.name}"></a>`
   ).join("");
 
   // ---- Hero image slider (fills the space next to the hero copy) ----
@@ -324,7 +297,7 @@ window.CONTENT_READY.then(function(){
     if(!slidesEl || !images.length) return;
 
     slidesEl.innerHTML = images.map((src, i) =>
-      `<img src="${src}" alt="D Wall dormitory photo" class="hero-slide${i === 0 ? " active" : ""}">`
+      `<img src="${bustImg(src)}" alt="D Wall dormitory photo" class="hero-slide${i === 0 ? " active" : ""}">`
     ).join("");
     dotsEl.innerHTML = images.map((_, i) =>
       `<button type="button" class="hero-slider-dot${i === 0 ? " active" : ""}" aria-label="Slide ${i + 1}"></button>`
@@ -352,35 +325,9 @@ window.CONTENT_READY.then(function(){
     sliderEl.addEventListener("mouseleave", startAutoplay);
     startAutoplay();
   })();
-
-  // Populate the hero availability widget's property dropdown from DORMITORIES.
-  const propertyOptionsHTML = DORMITORIES.map(d =>
-    `<option value="${d.id}">${d.name} (${d.availableBeds > 0 ? d.availableBeds.toLocaleString() + " available" : "fully booked"})</option>`
-  ).join("");
-  document.getElementById("aw-property").insertAdjacentHTML("beforeend", propertyOptionsHTML);
-
-  // Hero availability widget: no live booking backend, so this takes the
-  // visitor straight to the enquiry form with their selection pre-filled.
-  // Property + move-in date are carried via hidden fields so the visible
-  // form stays to just Name / Company / Headcount / Email.
-  document.getElementById("availability-form").addEventListener("submit", (e)=>{
-    e.preventDefault();
-    const propertySelect = document.getElementById("aw-property");
-    const propertyId = propertySelect.value;
-    const propertyName = propertyId ? propertySelect.selectedOptions[0].textContent : "";
-    const movein = document.getElementById("aw-movein").value;
-    const headcount = document.getElementById("aw-headcount").value;
-
-    if(headcount) document.getElementById("headcount").value = headcount + " beds";
-    if(propertyName) document.getElementById("property").value = propertyName;
-    if(movein) document.getElementById("message").value = `Preferred move-in date: ${movein}`;
-
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth", block: "start" });
-    document.getElementById("name").focus({ preventScroll: true });
-  });
 }); // end CONTENT_READY.then
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="js/site-map.js?v=9"></script>
+<script src="js/site-map.js?v=11"></script>
 </body>
 </html>

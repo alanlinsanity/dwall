@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TWL Hospitality — Backpacker Hostels | D Wall</title>
 <meta name="description" content="TWL Hospitality operates a collection of backpacker hostels across Singapore, affiliated with D Wall.">
-<link rel="stylesheet" href="css/styles.css?v=9">
+<link rel="stylesheet" href="css/styles.css?v=11">
 </head>
 <body>
 
@@ -92,15 +92,15 @@
   </div>
 </footer>
 
-<script src="js/site-config.js?v=9"></script>
-<script src="js/load-content.js?v=9"></script>
-<script src="js/main.js?v=9"></script>
+<script src="js/site-config.js?v=11"></script>
+<script src="js/load-content.js?v=11"></script>
+<script src="js/main.js?v=11"></script>
 <script>
 window.CONTENT_READY.then(function(){
   function hostelCardHTML(h){
     return `<a class="card" href="detail.html?type=hostel&id=${h.id}">
       <div class="thumb">
-        <img src="${h.heroImage}" alt="${h.name}">
+        <img src="${bustImg(h.heroImage)}" alt="${h.name}">
         <span class="pin">${h.location}</span>
       </div>
       <div class="body">
