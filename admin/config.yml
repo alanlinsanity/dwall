@@ -1,12 +1,17 @@
 # Decap CMS configuration for the D Wall website.
 #
-# This is what turns /admin into a real login + editing dashboard.
-# It requires Netlify Identity + Git Gateway to be turned on for this
-# site (two toggles in your Netlify dashboard — see the setup guide).
+# Auth: uses GitHub login directly (via Netlify's OAuth proxy), NOT
+# Netlify Identity / Git Gateway — Git Gateway is deprecated by Netlify
+# and was causing the "not returning valid settings" error. This is the
+# current supported approach: no separate signup, just log in with the
+# same GitHub account that owns the repo.
 
 backend:
-  name: git-gateway
+  name: github
+  repo: alanlinsanity/dwall   # <-- change this to your actual owner/repo
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 # Where uploaded photos are stored, and the URL path they're served from.
 # This matches the /content/uploads folder already in the project.
