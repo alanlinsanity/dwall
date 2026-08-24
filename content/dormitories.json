@@ -35,7 +35,7 @@
       "vrTourUrl": "",
       "availableBeds": 0,
       "roomAmenities": [
-        "Bunk Bed with board",
+        "Bunk Bed with Board",
         "Personal Locker",
         "Ceiling Fans",
         "Individual Power Socket",
@@ -89,45 +89,39 @@
     },
     {
       "yearBuilt": "1995",
-      "heroImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1600&auto=format&fit=crop",
+      "heroImage": "/content/uploads/hf_20260824_074511_00a352cf-adf5-4a75-abd8-da61feff37a2.png",
       "lng": 103.884625,
-      "summary": "One of our earlier developments, fully upgraded in 2023 with new kitchen decks and expanded recreation space.",
+      "summary": "One of our earlier developments, this is the most preferred location for dormitory as it is located just minutes walk from Tai Seng MRT. Almost 100% full all year round.",
       "name": "Etrek Building Dormitory",
-      "mapQuery": "Jurong Industrial Estate, Singapore",
+      "mapQuery": "10 Shaw Road, Singapore",
       "capacityScale": 7.5,
       "communalFacilities": [
-        "24hr security & CCTV",
-        "On-site sick bay",
-        "Wet & dry kitchens",
-        "Laundry decks",
-        "Convenience mart",
-        "Prayer room",
-        "Two recreation decks",
-        "Free shuttle to worksites"
+        "24hr Security & CCTV",
+        "On-site Sick Bay",
+        "Laundry Service",
+        "Prayer Room",
+        "Recreation Room"
       ],
-      "beds": 950,
+      "beds": 1000,
       "gallery": [
-        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1571508601891-ca5e7a713859?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1522771930-78848d9293e8?q=80&w=800&auto=format&fit=crop"
+        "/content/uploads/hf_20260824_074557_8191bc68-652f-438e-acd4-1c622ee09ac7.png"
       ],
-      "status": "full",
+      "status": "waitlist",
       "location": "Shaw Road, Singapore",
       "distance": "5 min to Tai Seng MRT",
       "writeup": [
-        "Jurong Central Block has housed workers from the surrounding port and processing industries since 2017, and underwent a full facilities upgrade in 2023.",
-        "The refurbishment added a second recreation deck, expanded wet-kitchen capacity, and replaced all room lighting and ventilation fittings.",
-        "Its location places most major Jurong-area worksites within a short shuttle ride, reducing daily commute time for residents."
+        "Shaw Road Dormitory comes with parking spaces and centralised laundry facilities.",
+        "Surrounded by food options & industrial factories."
       ],
       "id": "shaw-road-dormitory",
       "vrTourUrl": "",
       "availableBeds": 0,
       "roomAmenities": [
-        "Bunk bed with mattress & pillow",
-        "Personal storage locker",
-        "Ceiling fan",
-        "Individual power socket",
-        "Upgraded LED lighting (2023)"
+        "Bunk Bed with Boards",
+        "Personal Locker",
+        "Ceiling Fans",
+        "Individual Power Socket",
+        "NO Cooking"
       ],
       "videoTourUrl": "",
       "roomTypes": "12 to 20 pax rooms",
