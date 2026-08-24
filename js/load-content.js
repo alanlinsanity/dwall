@@ -19,24 +19,27 @@ window.CONTENT_READY = (async function loadContent(){
   window.IMG_CACHE_BUST = v; // reused below to bust image caching too
   const base = "content/";
   try{
-    const [dormRes, hostelRes, projRes, teamRes] = await Promise.all([
+    const [dormRes, hostelRes, projRes, teamRes, heroRes] = await Promise.all([
       fetch(base + "dormitories.json?v=" + v, { cache: "no-store" }),
       fetch(base + "hostels.json?v=" + v, { cache: "no-store" }),
       fetch(base + "projects.json?v=" + v, { cache: "no-store" }),
-      fetch(base + "team.json?v=" + v, { cache: "no-store" })
+      fetch(base + "team.json?v=" + v, { cache: "no-store" }),
+      fetch(base + "hero.json?v=" + v, { cache: "no-store" })
     ]);
-    const [dorm, hostel, proj, team] = await Promise.all([
-      dormRes.json(), hostelRes.json(), projRes.json(), teamRes.json()
+    const [dorm, hostel, proj, team, hero] = await Promise.all([
+      dormRes.json(), hostelRes.json(), projRes.json(), teamRes.json(), heroRes.json()
     ]);
     window.DORMITORIES = dorm.dormitories || [];
     window.HOSTELS = hostel.hostels || [];
     window.PROJECTS = proj.projects || [];
     window.TEAM = team.team || [];
+    window.HERO_IMAGES = hero.heroImages || [];
   } catch(err){
     console.error("Failed to load site content from /content/*.json:", err);
     window.DORMITORIES = window.DORMITORIES || [];
     window.HOSTELS = window.HOSTELS || [];
     window.PROJECTS = window.PROJECTS || [];
     window.TEAM = window.TEAM || [];
+    window.HERO_IMAGES = window.HERO_IMAGES || [];
   }
 })();
