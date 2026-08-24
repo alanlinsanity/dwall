@@ -1,36 +1,36 @@
 {
   "projects": [
     {
-      "id": "jurong-upgrade-2023",
-      "name": "Jurong Central Block — Facilities Upgrade",
-      "year": "2023",
-      "tag": "Refurbishment",
-      "image": "https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=1000&auto=format&fit=crop",
-      "summary": "Full kitchen, lighting and recreation-deck upgrade across an existing 3,500-bed dormitory, completed without disrupting occupancy."
+      "id": "coastal-dormitory",
+      "name": "Coastal Dormitory (Changi East)",
+      "year": "2021 - 2024",
+      "tag": "New build",
+      "image": "/content/uploads/d-wall-coastal-dormitory-deck-9-.png",
+      "summary": "12,480 beds PBD within Changi East site\n(Management)"
+    },
+    {
+      "id": "north-coast-lodge",
+      "name": "North-Coast-Lodge",
+      "year": "2015",
+      "tag": "New build",
+      "image": "/content/uploads/ncl.avif",
+      "summary": "9,000-bed PBD in Woodlands\n(Management)"
+    },
+    {
+      "id": "changi-pkg-0",
+      "name": "Changi Package 0 MOT Dormitory",
+      "year": "2015",
+      "tag": "New build",
+      "image": "/content/uploads/d-wall-coastal-dormitory-deck-7-.png",
+      "summary": "2,496 beds CTQ within Changi East site\n(Management)"
     },
     {
       "id": "senoko-development-2021",
-      "name": "Senoko Crescent Dormitory — Ground-Up Development",
-      "year": "2021",
+      "name": "Changi Package 1 SSKBJV Dormitory",
+      "year": "2017",
       "tag": "New build",
-      "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop",
-      "summary": "Ground-up development of a 2,800-bed purpose-built dormitory, delivered to the latest generation of workforce housing standards."
-    },
-    {
-      "id": "chinatown-conversion-2020",
-      "name": "Chinatown Shophouse — Heritage Conversion",
-      "year": "2020",
-      "tag": "Adaptive reuse",
-      "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1000&auto=format&fit=crop",
-      "summary": "Conservation shophouse converted into a licensed backpacker hostel under TWL Hospitality, preserving original facade and timber features."
-    },
-    {
-      "id": "tuas-development-2019",
-      "name": "Tuas View Lodge — Ground-Up Development",
-      "year": "2019",
-      "tag": "New build",
-      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
-      "summary": "4,200-bed dormitory built to serve the Tuas South marine and heavy-industrial cluster, our largest development to date."
+      "image": "/content/uploads/d-wall-coastal-dormitory-deck-10-.png",
+      "summary": "1,248 beds CTQ within Changi East site\n(Management)"
     }
   ]
 }
