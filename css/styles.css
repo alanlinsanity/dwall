@@ -397,9 +397,9 @@ footer{ border-top:1px solid var(--border); padding: 52px 0 40px; background: va
 .detail-title-row{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-top:14px;}
 .detail-loc{ display:flex; align-items:center; gap:8px; margin-top:10px; color:var(--ink-soft); font-size:14.5px; }
 
-.gallery{ margin-top:32px; display:grid; grid-template-columns: 2fr 1fr; gap:12px; overflow:hidden; height: 440px; border-radius: var(--r-lg); }
-.gallery .main{ background: var(--bg-soft); overflow:hidden; border-radius: var(--r-lg); }
-.gallery .side{ display:grid; grid-template-rows: 1fr 1fr; gap:12px; }
+.gallery{ margin-top:32px; display:grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr; gap:12px; overflow:hidden; height: 440px; border-radius: var(--r-lg); }
+.gallery .main{ background: var(--bg-soft); overflow:hidden; border-radius: var(--r-lg); height:100%; }
+.gallery .side{ display:grid; grid-template-rows: 1fr 1fr; gap:12px; height:100%; }
 .gallery .side div{ background: var(--bg-soft); overflow:hidden; position:relative; border-radius: var(--r-md); }
 .gallery img{ width:100%; height:100%; object-fit:cover; }
 .gallery .side div:last-child::after{
@@ -429,7 +429,7 @@ footer{ border-top:1px solid var(--border); padding: 52px 0 40px; background: va
 
 .tour-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
 .tour-card{ overflow:hidden; background:var(--paper); border-radius: var(--r-md); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
-.tour-card .frame{ aspect-ratio: 16/10; background: var(--navy-deep); position:relative; }
+.tour-card .frame{ aspect-ratio: 16/10; min-height: 160px; background: var(--navy-deep); position:relative; }
 .tour-card .frame iframe, .tour-card .frame video{ width:100%; height:100%; border:0; object-fit:cover; }
 .tour-card .frame .play{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
