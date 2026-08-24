@@ -88,11 +88,11 @@
       "lat": 1.3286973318792343
     },
     {
-      "yearBuilt": "2017",
+      "yearBuilt": "1995",
       "heroImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1600&auto=format&fit=crop",
-      "lng": 103.707,
+      "lng": 103.884625,
       "summary": "One of our earlier developments, fully upgraded in 2023 with new kitchen decks and expanded recreation space.",
-      "name": "Jurong Central Block",
+      "name": "Etrek Building Dormitory",
       "mapQuery": "Jurong Industrial Estate, Singapore",
       "capacityScale": 7.5,
       "communalFacilities": [
@@ -105,21 +105,21 @@
         "Two recreation decks",
         "Free shuttle to worksites"
       ],
-      "beds": 3500,
+      "beds": 950,
       "gallery": [
         "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1571508601891-ca5e7a713859?q=80&w=800&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1522771930-78848d9293e8?q=80&w=800&auto=format&fit=crop"
       ],
       "status": "full",
-      "location": "Jurong Industrial Estate, Singapore",
-      "distance": "5 min to Jurong Port",
+      "location": "Shaw Road, Singapore",
+      "distance": "5 min to Tai Seng MRT",
       "writeup": [
         "Jurong Central Block has housed workers from the surrounding port and processing industries since 2017, and underwent a full facilities upgrade in 2023.",
         "The refurbishment added a second recreation deck, expanded wet-kitchen capacity, and replaced all room lighting and ventilation fittings.",
         "Its location places most major Jurong-area worksites within a short shuttle ride, reducing daily commute time for residents."
       ],
-      "id": "jurong-central-block",
+      "id": "shaw-road-dormitory",
       "vrTourUrl": "",
       "availableBeds": 0,
       "roomAmenities": [
@@ -130,8 +130,8 @@
         "Upgraded LED lighting (2023)"
       ],
       "videoTourUrl": "",
-      "roomTypes": "8-bed rooms",
-      "lat": 1.333
+      "roomTypes": "12 to 20 pax rooms",
+      "lat": 1.3369518984008721
     }
   ]
 }
