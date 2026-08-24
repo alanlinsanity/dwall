@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Past Projects | D Wall</title>
+<meta name="description" content="A look at D Wall's development track record — ground-up builds, refurbishments and adaptive reuse projects.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="D Wall"></a>
+    <div class="nav-links">
+      <a href="index.html" data-nav="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-toggle">Accommodation <span class="caret">&#9662;</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="index.html#dormitories">Workers&rsquo; Dormitories</a>
+          <a href="hospitality.html">Backpackers&rsquo; Hostels</a>
+        </div>
+      </div>
+      <a href="past-projects.html" data-nav="past-projects.html">Past Projects</a>
+      <a href="team.html" data-nav="team.html">Our Team</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="index.html#dormitories" class="btn btn-primary">Check availability</a>
+    </div>
+  </div>
+</nav>
+
+<header class="wrap page-hero">
+  <div class="crumb"><a href="index.html">← Home</a></div>
+  <span class="index-label" style="margin-top:14px;">Track record</span>
+  <h1 style="margin-top:14px;">Past projects</h1>
+  <p class="lead">From ground-up dormitory developments to facility upgrades and heritage conversions — a look at what we've built and rebuilt.</p>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="filter-row" id="filter-row"></div>
+    <div class="card-grid reveal" id="project-grid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand"><img src="assets/logo.png" alt="D Wall"></a>
+        <p class="footer-meta" style="margin-top:12px; max-width:32ch;">Purpose-built dormitory development &amp; operations, with affiliated backpacker hostels under TWL Hospitality.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Properties</h4>
+        <div class="footer-links">
+          <a href="index.html#dormitories">Workers&rsquo; Dormitories</a>
+          <a href="hospitality.html">Backpackers&rsquo; Hostels</a>
+          <a href="past-projects.html">Past Projects</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="team.html">Our Team</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <div class="footer-links">
+          <a href="tel:+6560000000">+65 6000 0000</a>
+          <a href="mailto:enquiries@dwall.sg">enquiries@dwall.sg</a>
+          <span class="footer-meta">1 Dormitory Way, Singapore 620000</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta">© 2026 D Wall. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-card" id="lightbox-card" style="position:relative;">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <div id="lightbox-inner"></div>
+  </div>
+</div>
+
+<script src="js/site-config.js"></script>
+<script src="js/load-content.js"></script>
+<script src="js/main.js"></script>
+<script>
+window.CONTENT_READY.then(function(){
+  const tags = ["All", ...new Set(PROJECTS.map(p => p.tag))];
+  let activeTag = "All";
+
+  function renderFilters(){
+    document.getElementById("filter-row").innerHTML = tags.map(t =>
+      `<button class="filter-chip ${t === activeTag ? "active" : ""}" data-tag="${t}">${t}</button>`
+    ).join("");
+    document.querySelectorAll(".filter-chip").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        activeTag = btn.getAttribute("data-tag");
+        renderFilters();
+        renderGrid();
+      });
+    });
+  }
+
+  function renderGrid(){
+    const items = activeTag === "All" ? PROJECTS : PROJECTS.filter(p => p.tag === activeTag);
+    document.getElementById("project-grid").innerHTML = items.map(p => `
+      <div class="card project-card" data-open="${p.id}" style="cursor:pointer;">
+        <div class="thumb">
+          <img src="${p.image}" alt="${p.name}">
+          <span class="pin">${p.year}</span>
+        </div>
+        <div class="body">
+          <span class="status">${p.tag}</span>
+          <h3>${p.name}</h3>
+          <p>${p.summary}</p>
+        </div>
+      </div>
+    `).join("");
+    document.querySelectorAll("[data-open]").forEach(card=>{
+      card.addEventListener("click", ()=> openLightbox(card.getAttribute("data-open")));
+    });
+  }
+
+  function openLightbox(id){
+    const p = PROJECTS.find(x => x.id === id);
+    if(!p) return;
+    document.getElementById("lightbox-inner").innerHTML = `
+      <img src="${p.image}" alt="${p.name}">
+      <div class="inner">
+        <span class="index-label">${p.tag} · ${p.year}</span>
+        <h2 style="margin-top:12px;">${p.name}</h2>
+        <p style="margin-top:14px;">${p.summary}</p>
+      </div>`;
+    document.getElementById("lightbox").classList.add("open");
+  }
+  document.getElementById("lightbox-close").addEventListener("click", ()=>{
+    document.getElementById("lightbox").classList.remove("open");
+  });
+  document.getElementById("lightbox").addEventListener("click", (e)=>{
+    if(e.target.id === "lightbox") e.currentTarget.classList.remove("open");
+  });
+
+  renderFilters();
+  renderGrid();
+});
+</script>
+</body>
+</html>

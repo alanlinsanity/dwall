@@ -1,0 +1,94 @@
+{
+  "hostels": [
+    {
+      "id": "beary-good-hostel-bugis",
+      "lat": 1.3006,
+      "lng": 103.856,
+      "name": "A Beary Good Hostel — Bugis",
+      "location": "Bugis, Singapore",
+      "heroImage": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200&auto=format&fit=crop",
+      "summary": "Our flagship backpacker hostel, steps from Bugis Street and the Kampong Glam heritage district.",
+      "writeup": [
+        "Our flagship TWL Hospitality property sits in the heart of Bugis, a short walk from Kampong Glam, Haji Lane and the Bugis MRT interchange.",
+        "Dorm and private rooms are designed for independent travellers, with a shared kitchen, lounge and rooftop common area for guests to meet."
+      ],
+      "facilities": [
+        "Free Wi-Fi",
+        "Shared kitchen",
+        "Rooftop common area",
+        "24hr reception",
+        "Lockers",
+        "Laundry service"
+      ],
+      "mapQuery": "Bugis, Singapore",
+      "website": "https://twlhospitality.com"
+    },
+    {
+      "id": "beary-good-hostel-chinatown",
+      "lat": 1.283,
+      "lng": 103.844,
+      "name": "A Beary Good Hostel — Chinatown",
+      "location": "Chinatown, Singapore",
+      "heroImage": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1200&auto=format&fit=crop",
+      "summary": "A conservation shophouse conversion in the heart of Chinatown, close to Maxwell Food Centre.",
+      "writeup": [
+        "Housed in a restored conservation shophouse, this hostel blends heritage architecture with modern dorm and ensuite room options.",
+        "Guests are a two-minute walk from Maxwell Food Centre and the Chinatown MRT station, with easy access to the CBD."
+      ],
+      "facilities": [
+        "Free Wi-Fi",
+        "Shared kitchen",
+        "Heritage shophouse setting",
+        "24hr reception",
+        "Lockers"
+      ],
+      "mapQuery": "Chinatown, Singapore",
+      "website": "https://twlhospitality.com"
+    },
+    {
+      "id": "beary-good-hostel-lavender",
+      "lat": 1.307,
+      "lng": 103.863,
+      "name": "A Beary Good Hostel — Lavender",
+      "location": "Lavender, Singapore",
+      "heroImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200&auto=format&fit=crop",
+      "summary": "A quieter, budget-friendly base near Lavender MRT with easy access to the city and Kallang riverside.",
+      "writeup": [
+        "Our Lavender property is a favourite with longer-stay guests, offering a calmer neighbourhood setting a few minutes from Lavender MRT.",
+        "The Kallang Riverside and city centre are both a short ride away, making it a practical base for both leisure and work travel."
+      ],
+      "facilities": [
+        "Free Wi-Fi",
+        "Shared kitchen",
+        "Common lounge",
+        "24hr reception",
+        "Lockers",
+        "Laundry service"
+      ],
+      "mapQuery": "Lavender, Singapore",
+      "website": "https://twlhospitality.com"
+    },
+    {
+      "id": "beary-good-hostel-geylang",
+      "lat": 1.314,
+      "lng": 103.883,
+      "name": "A Beary Good Hostel — Geylang",
+      "location": "Geylang, Singapore",
+      "heroImage": "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?q=80&w=1200&auto=format&fit=crop",
+      "summary": "Our most affordable property, popular with long-stay guests exploring Singapore's eastern food scene.",
+      "writeup": [
+        "Set along Geylang's famed food street, this property is our most budget-conscious offering and a favourite for long-stay and returning guests.",
+        "It's a short ride from Changi Airport and the eastern coastal parks, with some of Singapore's best-loved hawker fare on the doorstep."
+      ],
+      "facilities": [
+        "Free Wi-Fi",
+        "Shared kitchen",
+        "24hr reception",
+        "Lockers",
+        "Long-stay rates"
+      ],
+      "mapQuery": "Geylang, Singapore",
+      "website": "https://twlhospitality.com"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "team": [
+    {
+      "name": "Alan Wei",
+      "role": "Managing Director",
+      "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
+      "bio": "Oversees dormitory development and hospitality operations across the group, with a background in Singapore real estate brokerage and development."
+    },
+    {
+      "name": "Priya Nathan",
+      "role": "Head of Operations",
+      "photo": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
+      "bio": "Manages day-to-day operations across all dormitory sites, including resident welfare programmes and facilities upkeep."
+    },
+    {
+      "name": "Marcus Tan",
+      "role": "Leasing & Partnerships",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+      "bio": "Works directly with employers to structure housing agreements and manage occupancy planning across our portfolio."
+    },
+    {
+      "name": "Siti Rahman",
+      "role": "Facilities & Compliance Lead",
+      "photo": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop",
+      "bio": "Ensures every site meets regulatory and safety standards, from fire safety compliance to welfare audits."
+    }
+  ]
+}

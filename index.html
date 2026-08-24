@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D Wall — Purpose-Built Worker Dormitories, Singapore</title>
+<meta name="description" content="D Wall develops and operates purpose-built dormitories for Singapore's workforce, with affiliated backpacker hostels under TWL Hospitality.">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="D Wall"></a>
+    <div class="nav-links">
+      <a href="index.html" data-nav="index.html" class="active">Home</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-toggle">Accommodation <span class="caret">&#9662;</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="index.html#dormitories">Workers&rsquo; Dormitories</a>
+          <a href="hospitality.html">Backpackers&rsquo; Hostels</a>
+        </div>
+      </div>
+      <a href="past-projects.html" data-nav="past-projects.html">Past Projects</a>
+      <a href="team.html" data-nav="team.html">Our Team</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="index.html#dormitories" class="btn btn-primary">Check availability</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="index-label">Established since 2002</span>
+        <h1 style="margin-top:16px;">Your Preferred Dormitory Accommodation Provider</h1>
+        <p class="lead">D Wall develops and operates dormitories designed around how people actually live and work — safe, well-run, and close to where the job is.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-outline">Talk to our leasing team</a>
+        </div>
+      </div>
+      <div class="hero-slider" id="hero-slider">
+        <div class="hero-slides" id="hero-slides"></div>
+        <div class="hero-slider-dots" id="hero-slider-dots"></div>
+      </div>
+    </div>
+
+    <div class="hero-stats-bar">
+      <div class="hero-stat-inline"><span class="num">3</span><span class="cap">Dormitories operated</span></div>
+      <div class="hero-stat-inline"><span class="num">10,500+</span><span class="cap">Beds under management</span></div>
+      <div class="hero-stat-inline"><span class="num">4</span><span class="cap">TWL Hospitality hostels</span></div>
+    </div>
+
+    <div class="hero-media bracket">
+      <div class="grid-overlay"></div>
+      <span class="bl"></span><span class="br"></span>
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" alt="Dormitory exterior">
+      <span class="tag">Tuas View Lodge — our largest development to date</span>
+    </div>
+
+    <div class="availability-widget reveal">
+      <form id="availability-form">
+        <div class="aw-field">
+          <label for="aw-property">Property</label>
+          <select id="aw-property" name="property">
+            <option value="">All dormitories</option>
+          </select>
+        </div>
+        <div class="aw-field">
+          <label for="aw-movein">Move-in date</label>
+          <input type="date" id="aw-movein" name="movein">
+        </div>
+        <div class="aw-field">
+          <label for="aw-headcount">Headcount</label>
+          <input type="number" id="aw-headcount" name="headcount" min="1" placeholder="e.g. 40">
+        </div>
+        <button type="submit" class="btn btn-primary aw-submit">Check availability <span class="btn-arrow">→</span></button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<section class="map-section" id="locations">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="index-label">Where we operate</span>
+        <h2>All our sites, across the island.</h2>
+        <p class="desc">Dormitories and TWL Hospitality hostels, pinned and colour-coded. Tap a pin for details.</p>
+      </div>
+      <div class="map-legend">
+        <span class="item"><span class="dot c-navy"></span>Dormitories</span>
+        <span class="item"><span class="dot c-gold"></span>TWL Hospitality hostels</span>
+      </div>
+    </div>
+    <div class="site-map-frame bracket reveal">
+      <span class="bl"></span><span class="br"></span>
+      <div id="site-map" class="site-map"></div>
+    </div>
+  </div>
+</section>
+
+<section id="dormitories">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="index-label">Our dormitories</span>
+        <h2>Housing built for the long shift.</h2>
+        <p class="desc">Each site is managed on-site, seven days a week, with a direct line between residents and our operations team.</p>
+      </div>
+    </div>
+    <div class="card-grid reveal" id="dorm-grid"></div>
+  </div>
+</section>
+
+<section id="how-it-works" class="bg-soft-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="index-label">How it works</span>
+        <h2>Three steps to a signed lease.</h2>
+      </div>
+    </div>
+    <div class="steps-grid reveal">
+      <div class="step-item">
+        <span class="num">01</span>
+        <h3>Tell us your headcount</h3>
+        <p>Use the availability check above or send an enquiry with your headcount and preferred move-in date.</p>
+      </div>
+      <div class="step-item">
+        <span class="num">02</span>
+        <h3>Get a tailored quote</h3>
+        <p>Our leasing team confirms availability and sends a quote within one working day — no obligation.</p>
+      </div>
+      <div class="step-item">
+        <span class="num">03</span>
+        <h3>Move in, fully supported</h3>
+        <p>Once signed, our on-site team handles move-in logistics directly with you and your workers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-us">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="index-label">Why companies choose us</span>
+        <h2>Built to be trusted with your workforce.</h2>
+        <p class="desc">Housing your team is an operational decision, not just a real-estate one. Here's how we run things.</p>
+      </div>
+    </div>
+    <div class="trust-grid reveal" id="trust-grid"></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="index-label">Track record</span>
+        <h2>A look at past projects.</h2>
+        <p class="desc">From ground-up developments to full facility upgrades and adaptive reuse of heritage buildings.</p>
+      </div>
+      <a href="past-projects.html" class="section-link">View all past projects <span class="btn-arrow">→</span></a>
+    </div>
+    <div class="card-grid reveal" id="project-grid"></div>
+  </div>
+</section>
+
+<section class="band-navy" id="hospitality">
+  <div class="wrap">
+    <div class="other-accom-banner">
+      <div>
+        <span class="index-label">Other accommodations</span>
+        <h2>TWL Hospitality — backpacker hostels around the island.</h2>
+        <p class="desc">Our affiliated hospitality brand, TWL Hospitality, runs a small collection of backpacker hostels for independent travellers and long-stay guests.</p>
+      </div>
+      <a href="hospitality.html" class="btn btn-light">Visit TWL Hospitality <span class="btn-arrow">→</span></a>
+    </div>
+    <div class="hostel-photo-grid reveal" id="hostel-photo-grid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-band">
+      <div>
+        <span class="index-label">Get in touch</span>
+        <h2 style="margin-top:14px;">Looking to house your workforce, or partner with us?</h2>
+        <p style="margin-top:14px;">Tell us your headcount, preferred region and move-in timeline, and our leasing team will get back to you within one working day.</p>
+        <ul class="contact-list">
+          <li><b>Enquiries</b> <a href="mailto:enquiries@dwall.sg" style="color:inherit;">enquiries@dwall.sg</a></li>
+          <li><b>Phone</b> <a href="tel:+6560000000" style="color:inherit;">+65 6000 0000</a></li>
+          <li><b>Office</b> 1 Dormitory Way, Singapore 620000</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <form data-enquiry-form>
+          <input type="hidden" id="property" name="property">
+          <input type="hidden" id="message" name="message">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name">
+          </div>
+          <div class="form-row">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" placeholder="Company / employer">
+          </div>
+          <div class="form-row">
+            <label for="headcount">Headcount needed</label>
+            <input id="headcount" name="headcount" type="text" placeholder="e.g. 40 beds">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@company.com">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send enquiry</button>
+          <div class="form-success">Thanks — your enquiry has been noted. We'll be in touch shortly.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand"><img src="assets/logo.png" alt="D Wall"></a>
+        <p class="footer-meta" style="margin-top:12px; max-width:32ch;">Purpose-built dormitory development &amp; operations, with affiliated backpacker hostels under TWL Hospitality.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Properties</h4>
+        <div class="footer-links">
+          <a href="index.html#dormitories">Workers&rsquo; Dormitories</a>
+          <a href="hospitality.html">Backpackers&rsquo; Hostels</a>
+          <a href="past-projects.html">Past Projects</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="team.html">Our Team</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <div class="footer-links">
+          <a href="tel:+6560000000">+65 6000 0000</a>
+          <a href="mailto:enquiries@dwall.sg">enquiries@dwall.sg</a>
+          <span class="footer-meta">1 Dormitory Way, Singapore 620000</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta">© 2026 D Wall. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site-config.js"></script>
+<script src="js/load-content.js"></script>
+<script src="js/main.js"></script>
+<script>
+window.CONTENT_READY.then(function(){
+  function dormCardHTML(d, i){
+    return `<a class="card" href="detail.html?type=dormitory&id=${d.id}">
+      <div class="thumb">
+        <img src="${d.heroImage}" alt="${d.name}">
+        <span class="pin">${d.location}</span>
+      </div>
+      <div class="body">
+        <h3>${d.name}</h3>
+        <p class="loc">${d.roomTypes} · Built ${d.yearBuilt}</p>
+        <p>${d.summary}</p>
+        ${availabilityBadgeHTML(d.status)}
+        <div class="foot">
+          ${specPlateHTML(i + 1, d.beds.toLocaleString(), "total beds")}
+          <span class="view">Check availability →</span>
+        </div>
+      </div>
+    </a>`;
+  }
+  function projectCardHTML(p){
+    return `<div class="card project-card">
+      <div class="thumb">
+        <img src="${p.image}" alt="${p.name}">
+        <span class="pin">${p.year}</span>
+      </div>
+      <div class="body">
+        <span class="status">${p.tag}</span>
+        <h3>${p.name}</h3>
+        <p>${p.summary}</p>
+      </div>
+    </div>`;
+  }
+  function trustItemHTML(t, i){
+    return `<div class="trust-item">
+      <span class="num">${String(i + 1).padStart(2, "0")}</span>
+      <h3>${t.title}</h3>
+      <p>${t.desc}</p>
+    </div>`;
+  }
+
+  document.getElementById("dorm-grid").innerHTML = DORMITORIES.map(dormCardHTML).join("");
+  document.getElementById("project-grid").innerHTML = PROJECTS.slice(0,3).map(projectCardHTML).join("");
+  document.getElementById("trust-grid").innerHTML = TRUST_POINTS.map(trustItemHTML).join("");
+  document.getElementById("hostel-photo-grid").innerHTML = HOSTELS.slice(0,4).map(h =>
+    `<a href="detail.html?type=hostel&id=${h.id}" class="hostel-photo"><img src="${h.heroImage}" alt="${h.name}"></a>`
+  ).join("");
+
+  // ---- Hero image slider (fills the space next to the hero copy) ----
+  (function(){
+    const images = DORMITORIES.flatMap(d => d.gallery && d.gallery.length ? d.gallery.slice(0, 2) : [d.heroImage]);
+    const slidesEl = document.getElementById("hero-slides");
+    const dotsEl = document.getElementById("hero-slider-dots");
+    if(!slidesEl || !images.length) return;
+
+    slidesEl.innerHTML = images.map((src, i) =>
+      `<img src="${src}" alt="D Wall dormitory photo" class="hero-slide${i === 0 ? " active" : ""}">`
+    ).join("");
+    dotsEl.innerHTML = images.map((_, i) =>
+      `<button type="button" class="hero-slider-dot${i === 0 ? " active" : ""}" aria-label="Slide ${i + 1}"></button>`
+    ).join("");
+
+    const slides = slidesEl.querySelectorAll(".hero-slide");
+    const dots = dotsEl.querySelectorAll(".hero-slider-dot");
+    let current = 0;
+    let timer;
+
+    function goTo(i){
+      slides[current].classList.remove("active");
+      dots[current].classList.remove("active");
+      current = (i + images.length) % images.length;
+      slides[current].classList.add("active");
+      dots[current].classList.add("active");
+    }
+    function next(){ goTo(current + 1); }
+    function startAutoplay(){ timer = setInterval(next, 4500); }
+    function stopAutoplay(){ clearInterval(timer); }
+
+    dots.forEach((dot, i) => dot.addEventListener("click", () => { goTo(i); stopAutoplay(); startAutoplay(); }));
+    const sliderEl = document.getElementById("hero-slider");
+    sliderEl.addEventListener("mouseenter", stopAutoplay);
+    sliderEl.addEventListener("mouseleave", startAutoplay);
+    startAutoplay();
+  })();
+
+  // Populate the hero availability widget's property dropdown from DORMITORIES.
+  const propertyOptionsHTML = DORMITORIES.map(d =>
+    `<option value="${d.id}">${d.name} (${d.availableBeds > 0 ? d.availableBeds.toLocaleString() + " available" : "fully booked"})</option>`
+  ).join("");
+  document.getElementById("aw-property").insertAdjacentHTML("beforeend", propertyOptionsHTML);
+
+  // Hero availability widget: no live booking backend, so this takes the
+  // visitor straight to the enquiry form with their selection pre-filled.
+  // Property + move-in date are carried via hidden fields so the visible
+  // form stays to just Name / Company / Headcount / Email.
+  document.getElementById("availability-form").addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const propertySelect = document.getElementById("aw-property");
+    const propertyId = propertySelect.value;
+    const propertyName = propertyId ? propertySelect.selectedOptions[0].textContent : "";
+    const movein = document.getElementById("aw-movein").value;
+    const headcount = document.getElementById("aw-headcount").value;
+
+    if(headcount) document.getElementById("headcount").value = headcount + " beds";
+    if(propertyName) document.getElementById("property").value = propertyName;
+    if(movein) document.getElementById("message").value = `Preferred move-in date: ${movein}`;
+
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById("name").focus({ preventScroll: true });
+  });
+}); // end CONTENT_READY.then
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="js/site-map.js"></script>
+</body>
+</html>

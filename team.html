@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team | D Wall</title>
+<meta name="description" content="Meet the team behind D Wall's dormitory operations and TWL Hospitality's hostel portfolio.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="D Wall"></a>
+    <div class="nav-links">
+      <a href="index.html" data-nav="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-toggle">Accommodation <span class="caret">&#9662;</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="index.html#dormitories">Workers&rsquo; Dormitories</a>
+          <a href="hospitality.html">Backpackers&rsquo; Hostels</a>
+        </div>
+      </div>
+      <a href="past-projects.html" data-nav="past-projects.html">Past Projects</a>
+      <a href="team.html" data-nav="team.html" class="active">Our Team</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="index.html#dormitories" class="btn btn-primary">Check availability</a>
+    </div>
+  </div>
+</nav>
+
+<header class="wrap page-hero">
+  <div class="crumb"><a href="index.html">← Home</a></div>
+  <span class="index-label" style="margin-top:14px; display:inline-block;">Our team</span>
+  <h1 style="margin-top:14px;">The people behind D Wall.</h1>
+  <p class="lead">A small, hands-on team managing dormitory operations and our affiliated TWL Hospitality hostels — from leasing and welfare to facilities and compliance.</p>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="team-grid reveal" id="team-grid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-band">
+      <div>
+        <span class="index-label" style="color:var(--gold-soft);">Get in touch</span>
+        <h2 style="margin-top:14px;">Want to speak with our team directly?</h2>
+        <p style="margin-top:14px;">Reach out and we'll connect you with the right person, whether it's leasing, operations, or a media enquiry.</p>
+        <ul class="contact-list">
+          <li><b>Enquiries</b> enquiries@dwall.sg</li>
+          <li><b>Phone</b> +65 6000 0000</li>
+          <li><b>Office</b> 1 Dormitory Way, Singapore 620000</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <form data-enquiry-form>
+          <div class="form-row">
+            <label for="t-name">Name</label>
+            <input id="t-name" name="name" type="text" required placeholder="Your full name">
+          </div>
+          <div class="form-row">
+            <label for="t-email">Email</label>
+            <input id="t-email" name="email" type="email" required placeholder="you@company.com">
+          </div>
+          <div class="form-row">
+            <label for="t-message">Message</label>
+            <textarea id="t-message" name="message" placeholder="Who would you like to reach, and what about?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message</button>
+          <div class="form-success">Thanks — your message has been noted. We'll be in touch shortly.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand"><img src="assets/logo.png" alt="D Wall"></a>
+        <p class="footer-meta" style="margin-top:12px; max-width:32ch;">Purpose-built dormitory development &amp; operations, with affiliated backpacker hostels under TWL Hospitality.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Properties</h4>
+        <div class="footer-links">
+          <a href="index.html#dormitories">Workers&rsquo; Dormitories</a>
+          <a href="hospitality.html">Backpackers&rsquo; Hostels</a>
+          <a href="past-projects.html">Past Projects</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="team.html">Our Team</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <div class="footer-links">
+          <a href="tel:+6560000000">+65 6000 0000</a>
+          <a href="mailto:enquiries@dwall.sg">enquiries@dwall.sg</a>
+          <span class="footer-meta">1 Dormitory Way, Singapore 620000</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta">© 2026 D Wall. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site-config.js"></script>
+<script src="js/load-content.js"></script>
+<script src="js/main.js"></script>
+<script>
+window.CONTENT_READY.then(function(){
+  function teamCardHTML(m){
+    return `<div class="card team-card">
+      <div class="body" style="align-items:center;">
+        <div class="photo"><img src="${m.photo}" alt="${m.name}"></div>
+        <h3>${m.name}</h3>
+        <span class="role">${m.role}</span>
+        <p class="bio">${m.bio}</p>
+      </div>
+    </div>`;
+  }
+  document.getElementById("team-grid").innerHTML = TEAM.map(teamCardHTML).join("");
+});
+</script>
+</body>
+</html>

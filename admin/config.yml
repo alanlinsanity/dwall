@@ -1,0 +1,144 @@
+# Decap CMS configuration for the D Wall website.
+#
+# This is what turns /admin into a real login + editing dashboard.
+# It requires Netlify Identity + Git Gateway to be turned on for this
+# site (two toggles in your Netlify dashboard — see the setup guide).
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded photos are stored, and the URL path they're served from.
+# This matches the /content/uploads folder already in the project.
+media_folder: "content/uploads"
+public_folder: "/content/uploads"
+
+site_url: https://dwall.sg
+display_url: https://dwall.sg
+logo_url: /assets/logo.png
+
+collections:
+  # ---------------- DORMITORIES ----------------
+  - name: "dormitories"
+    label: "Workers' Dormitories"
+    files:
+      - name: "dormitories"
+        label: "Dormitories"
+        file: "content/dormitories.json"
+        fields:
+          - label: "Dormitories"
+            name: "dormitories"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.status}}"
+            fields:
+              - { label: "URL slug (lowercase, hyphens only — do not change once live)", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Location (short, e.g. 'Tuas South, Singapore')", name: "location", widget: "string" }
+              - { label: "Latitude (for the map pin)", name: "lat", widget: "number", value_type: "float" }
+              - { label: "Longitude (for the map pin)", name: "lng", widget: "number", value_type: "float" }
+              - label: "Availability status"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "Beds Available", value: "available" }
+                  - { label: "Waitlist", value: "waitlist" }
+                  - { label: "Fully Booked", value: "full" }
+              - { label: "Beds currently available", name: "availableBeds", widget: "number", value_type: "int" }
+              - { label: "Total beds", name: "beds", widget: "number", value_type: "int" }
+              - { label: "Map fill scale (0–10, cosmetic only)", name: "capacityScale", widget: "number", value_type: "float", required: false }
+              - { label: "Room types (e.g. '8 & 12-bed rooms')", name: "roomTypes", widget: "string" }
+              - { label: "Year built", name: "yearBuilt", widget: "string" }
+              - { label: "Distance note (e.g. '6 min to Tuas Checkpoint')", name: "distance", widget: "string" }
+              - { label: "Main photo", name: "heroImage", widget: "image" }
+              - label: "Photo gallery"
+                name: "gallery"
+                widget: "list"
+                field: { label: "Photo", name: "image", widget: "image" }
+              - { label: "Short summary (shown on cards)", name: "summary", widget: "text" }
+              - label: "Write-up (one paragraph per entry)"
+                name: "writeup"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "In-Room Amenities"
+                name: "roomAmenities"
+                widget: "list"
+                field: { label: "Amenity", name: "item", widget: "string" }
+              - label: "Communal Facilities"
+                name: "communalFacilities"
+                widget: "list"
+                field: { label: "Facility", name: "item", widget: "string" }
+              - { label: "Map search text (address used for the embedded map)", name: "mapQuery", widget: "string" }
+              - { label: "VR tour embed URL (Matterport etc. — leave blank if none yet)", name: "vrTourUrl", widget: "string", required: false }
+              - { label: "Video tour embed URL (YouTube/Vimeo — leave blank if none yet)", name: "videoTourUrl", widget: "string", required: false }
+
+  # ---------------- HOSTELS (TWL Hospitality) ----------------
+  - name: "hostels"
+    label: "Backpackers' Hostels"
+    files:
+      - name: "hostels"
+        label: "Hostels"
+        file: "content/hostels.json"
+        fields:
+          - label: "Hostels"
+            name: "hostels"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "URL slug (lowercase, hyphens only — do not change once live)", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Location (short)", name: "location", widget: "string" }
+              - { label: "Latitude (for the map pin)", name: "lat", widget: "number", value_type: "float" }
+              - { label: "Longitude (for the map pin)", name: "lng", widget: "number", value_type: "float" }
+              - { label: "Main photo", name: "heroImage", widget: "image" }
+              - { label: "Short summary (shown on cards)", name: "summary", widget: "text" }
+              - label: "Write-up (one paragraph per entry)"
+                name: "writeup"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Facilities"
+                name: "facilities"
+                widget: "list"
+                field: { label: "Facility", name: "item", widget: "string" }
+              - { label: "Map search text (address used for the embedded map)", name: "mapQuery", widget: "string" }
+              - { label: "Booking website URL", name: "website", widget: "string", required: false }
+
+  # ---------------- PAST PROJECTS ----------------
+  - name: "projects"
+    label: "Past Projects"
+    files:
+      - name: "projects"
+        label: "Projects"
+        file: "content/projects.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.name}} ({{fields.year}})"
+            fields:
+              - { label: "URL-safe ID (lowercase, hyphens only)", name: "id", widget: "string" }
+              - { label: "Project name", name: "name", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - label: "Category tag"
+                name: "tag"
+                widget: "select"
+                options: ["New build", "Refurbishment", "Adaptive reuse"]
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Summary", name: "summary", widget: "text" }
+
+  # ---------------- OUR TEAM ----------------
+  - name: "team"
+    label: "Our Team"
+    files:
+      - name: "team"
+        label: "Team members"
+        file: "content/team.json"
+        fields:
+          - label: "Team members"
+            name: "team"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role / title", name: "role", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Short bio", name: "bio", widget: "text" }
