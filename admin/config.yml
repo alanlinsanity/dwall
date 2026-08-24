@@ -8,7 +8,7 @@
 
 backend:
   name: github
-  repo: alanlinsanity/dwall   # <-- change this to your actual owner/repo
+  repo: alanlinsanity/dwall   # your GitHub repo
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
