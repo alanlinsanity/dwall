@@ -3,25 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D Wall — Content Manager</title>
-  <!-- Prevents search engines from indexing the admin panel -->
   <meta name="robots" content="noindex" />
+  <title>D Wall — Content Manager</title>
 </head>
 <body>
-  <!-- Netlify Identity widget: handles login for the CMS -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", (user) => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-  <!-- Decap CMS (formerly Netlify CMS) -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="https://unpkg.com/decap-cms@^3.9.0/dist/decap-cms.js"></script>
 </body>
 </html>
