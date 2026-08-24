@@ -25,12 +25,28 @@
       "summary": "2,496 beds CTQ within Changi East site\n(Management)"
     },
     {
-      "id": "senoko-development-2021",
+      "id": "changi-pkg-1",
       "name": "Changi Package 1 SSKBJV Dormitory",
       "year": "2017",
       "tag": "New build",
       "image": "/content/uploads/d-wall-coastal-dormitory-deck-10-.png",
       "summary": "1,248 beds CTQ within Changi East site\n(Management)"
+    },
+    {
+      "id": "woodlands-lodge-2",
+      "name": "Woodlands Lodge 2",
+      "year": "2013 - 2021",
+      "tag": "New build",
+      "image": "/content/uploads/d-wall-coastal-dormitory-deck-11-.png",
+      "summary": "1,500 beds PBD in Woodlands\n(Management)"
+    },
+    {
+      "id": "psa-tentage-phase-2",
+      "name": "PSA Tentage Phase 2",
+      "year": "2021 - 2022",
+      "tag": "Adaptive reuse",
+      "image": "/content/uploads/d-wall-coastal-dormitory-deck-12-.png",
+      "summary": "3,500 beds GQF in Tanjong Pagar\n(Management)"
     }
   ]
 }
