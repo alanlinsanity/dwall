@@ -1,29 +1,7 @@
 {
   "hostels": [
     {
-      "heroImage": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200&auto=format&fit=crop",
-      "facilities": [
-        "Free Wi-Fi",
-        "Rooftop",
-        "Reception",
-        "Lockers",
-        "Laundry"
-      ],
-      "lng": 103.856,
-      "summary": "Our flagship backpacker hostel, steps from Bugis Street and the Kampong Glam heritage district.",
-      "name": "Beary Best! Hostel — Kampong Glam",
-      "mapQuery": "Bugis, Singapore",
-      "location": "Kampong Glam",
-      "writeup": [
-        "Our TWL Hospitality capsule property sits in the heart of Bugis, a short walk from Kampong Glam, Haji Lane and the Bugis MRT interchange.",
-        "Dorms and private rooms are designed for independent / group travellers, with a shared rooftop common area for guests to mingle."
-      ],
-      "website": "https://twlhospitality.com",
-      "id": "beary-best-kampong-glam",
-      "lat": 1.3006
-    },
-    {
-      "heroImage": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1200&auto=format&fit=crop",
+      "heroImage": "/content/uploads/bbct.jpg",
       "facilities": [
         "Free Wi-Fi",
         "Shared Pantry",
@@ -42,10 +20,32 @@
       ],
       "website": "https://twlhospitality.com",
       "id": "beary-best-chinatown",
-      "lat": 1.283
+      "lat": 1.2840357331470111
     },
     {
-      "heroImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200&auto=format&fit=crop",
+      "heroImage": "/content/uploads/bbkg.jpg",
+      "facilities": [
+        "Free Wi-Fi",
+        "Rooftop",
+        "Reception",
+        "Lockers",
+        "Laundry"
+      ],
+      "lng": 103.859311,
+      "summary": "Our flagship backpacker hostel, steps from Bugis Street and the Kampong Glam heritage district.",
+      "name": "Beary Best! Hostel — Kampong Glam",
+      "mapQuery": "Bugis, Singapore",
+      "location": "Kampong Glam",
+      "writeup": [
+        "Our TWL Hospitality capsule property sits in the heart of Bugis, a short walk from Kampong Glam, Haji Lane and the Bugis MRT interchange.",
+        "Dorms and private rooms are designed for independent / group travellers, with a shared rooftop common area for guests to mingle."
+      ],
+      "website": "https://twlhospitality.com",
+      "id": "beary-best-kampong-glam",
+      "lat": 1.3011682986864836
+    },
+    {
+      "heroImage": "/content/uploads/bblv.jpg",
       "facilities": [
         "Free Wi-Fi",
         "Shared Pantry",
@@ -68,13 +68,14 @@
       "lat": 1.307
     },
     {
-      "heroImage": "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?q=80&w=1200&auto=format&fit=crop",
+      "heroImage": "/content/uploads/fbh.jpg",
       "facilities": [
         "Free Wi-Fi",
         "Shared Kitchen",
         "Reception",
         "Lockers",
-        "Laundry"
+        "Laundry",
+        "Selection of Ensuite Rooms"
       ],
       "lng": 103.883,
       "summary": "Our upscale hostel asset, popular with tourist exploring Singapore and visiting for MICE.",
@@ -88,6 +89,28 @@
       "website": "https://twlhospitality.com",
       "id": "futura-boutique-hostel",
       "lat": 1.314
+    },
+    {
+      "heroImage": "/content/uploads/shh.jpg",
+      "facilities": [
+        "Free Wi-Fi",
+        "Laundry Service",
+        "Lounge Area",
+        "Reception",
+        "Luggage Rack"
+      ],
+      "lng": 103.848392,
+      "summary": "Opened in 2026, this blends luxury and heritage in one of the most scenic tourist spots near the Singapore River.",
+      "name": "Straits Heritage Hostel",
+      "mapQuery": "49 South Bridge Road, Singapore",
+      "location": "Clarke Quay, Singapore",
+      "writeup": [
+        "Located within minutes walk from Clarke Quay MRT, guests are within close proximity to near tourist attractions.",
+        "As a brand-new, designer boutique capsule hostel, we offer an elevated yet affordable stay experience — blending the rich history of the building with thoughtfully designed modern interiors."
+      ],
+      "website": "www.twlhospitality.com",
+      "id": "straits-heritage-hostel",
+      "lat": 1.2873133248284667
     }
   ]
 }
