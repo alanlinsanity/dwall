@@ -4,14 +4,23 @@ function getParam(name){
   return new URLSearchParams(window.location.search).get(name);
 }
 
-// Appends a cache-busting param to a content image URL so the browser
-// always fetches it fresh on every page load, rather than potentially
-// reusing a broken/incomplete cached copy of a large image file.
-// Leave external URLs (Unsplash, etc.) alone if not needed — safe either way.
-function bustImg(url){
+// For your own uploaded photos (content/uploads/...), routes the image
+// through Netlify's built-in Image CDN, which automatically resizes it
+// to `width` and serves it as WebP/AVIF where the visitor's browser
+// supports it — so a large uploaded photo is never sent at full size.
+// External URLs (Unsplash, etc.) are left as-is and just cache-busted.
+// `width` should roughly match how large the image actually displays —
+// no point fetching a 1600px image for a 120px thumbnail.
+function bustImg(url, width){
   if(!url) return url;
+  const cb = window.IMG_CACHE_BUST || Date.now();
+  const isOwnUpload = url.indexOf("/content/uploads/") === 0 || url.indexOf("content/uploads/") === 0;
+  if(isOwnUpload){
+    const w = width || 1200;
+    return "/.netlify/images?url=" + encodeURIComponent(url) + "&width=" + w + "&_cb=" + cb;
+  }
   const sep = url.includes("?") ? "&" : "?";
-  return url + sep + "_cb=" + (window.IMG_CACHE_BUST || Date.now());
+  return url + sep + "_cb=" + cb;
 }
 
 // Renders the key-stat chip used on dormitory cards (e.g. "4,200 beds").
