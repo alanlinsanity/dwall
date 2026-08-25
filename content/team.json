@@ -1,28 +1,46 @@
 {
   "team": [
     {
-      "name": "Alan Wei",
-      "role": "Managing Director",
+      "name": "Daniel Tan",
+      "role": "Founder / Chairman",
       "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
-      "bio": "Oversees dormitory development and hospitality operations across the group, with a background in Singapore real estate brokerage and development."
+      "bio": "With over 40 years of experience across the construction, manpower, and dormitory industries, our Founder & Chairman brings unparalleled industry knowledge, leadership, and a wealth of established relationships.\n\nAs a mentor and strategic advisor, he continues to guide the leadership team with his deep experience and long-term perspective, playing a pivotal role in shaping the company’s direction, growth, and continued success."
     },
     {
-      "name": "Priya Nathan",
-      "role": "Head of Operations",
+      "name": "Alexander Wu",
+      "role": "CEO",
       "photo": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
-      "bio": "Manages day-to-day operations across all dormitory sites, including resident welfare programmes and facilities upkeep."
+      "bio": "With over 10 years of industry experience, Alexander has played a pivotal role in driving the company’s business expansion and strategic growth.\n\nHe oversees the full lifecycle of new site developments — from deal-making and acquisition, through planning, conversion and construction, to licensing and eventual opening. His hands-on leadership and ability to navigate complex projects ensure that each development is delivered efficiently, seamlessly, and successfully."
     },
     {
-      "name": "Marcus Tan",
-      "role": "Leasing & Partnerships",
-      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
-      "bio": "Works directly with employers to structure housing agreements and manage occupancy planning across our portfolio."
+      "name": "Janell Tan",
+      "role": "COO",
+      "photo": "/content/uploads/d-wall-coastal-dormitory-deck-13-.png",
+      "bio": "Janell is the driving force behind our smooth day-to-day operations, with 10 years of experience with the company and a deep understanding of both our processes and people.\n\nShe oversees operations across all sites, including dormitories and hostels, continuously identifying areas for improvement and ensuring high standards are maintained. Her exceptional people-management skills and strong connection with staff enable her to resolve challenges effectively and keep operations running seamlessly."
     },
     {
-      "name": "Siti Rahman",
-      "role": "Facilities & Compliance Lead",
+      "name": "Tiffany Tan",
+      "role": "CFO",
       "photo": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop",
-      "bio": "Ensures every site meets regulatory and safety standards, from fire safety compliance to welfare audits."
+      "bio": "Tiffany, our detail-oriented CFO, oversees the company’s financial processes with precision and discipline, ensuring accuracy and sound financial management.\n\nBeyond finance, she plays an important role in talent acquisition and employee benefits, helping foster a positive and supportive workplace. Her attention to detail and commitment to excellence are integral to the company’s continued success."
+    },
+    {
+      "name": "Alan Lin",
+      "role": "CMO (D Wall) & Director (TWL Hospitality)",
+      "photo": "/content/uploads/d-wall-coastal-dormitory-deck-14-.png",
+      "bio": "Alan drives the company’s business development and growth initiatives, from sourcing new opportunities and identifying potential projects to building strategic partnerships.\n\nHe played a key role in the company’s expansion into the backpackers’ hostel segment and spearheads marketing initiatives that help maximise occupancy across our dormitory bed spaces. Combining strong business development instincts with a marketer’s mindset, Alan bridges opportunity creation with effective execution to drive sustainable growth."
+    },
+    {
+      "name": "Rachel Tan",
+      "bio": "Rachel brings valuable experience from the tech industry, having worked in inbound sales and business development at HubSpot. Since joining D Wall just over a year ago, she has taken on a key role in overseeing our newly opened dormitory, with a focus on occupancy, client relationships, and day-to-day business development.\n\nHer combination of sales expertise, commercial acumen, and relationship-building skills helps drive occupancy while ensuring strong and lasting relationships with our clients.",
+      "role": "Business Development & Operations (D Wall)",
+      "photo": "/content/uploads/d-wall-coastal-dormitory-deck-5-.png"
+    },
+    {
+      "name": "Ryan Tan ",
+      "role": "Business Development & Operations (TWL Hospitality)",
+      "bio": "Ryan oversees the day-to-day operations and improvement initiatives at TWL Hospitality, while concurrently pursuing a degree in hospitality.\n\nAs he builds his experience in team management and hospitality operations, Ryan brings a fresh, young perspective to the business, particularly in social media marketing across TikTok and Instagram. He has also successfully secured multiple guest partnerships, including exclusive discounts with nearby DOPA and Anytime Fitness, enhancing the overall guest experience.\n\nHis combination of hands-on experience, fresh ideas, and strong initiative continues to contribute to TWL Hospitality’s growth.",
+      "photo": "/content/uploads/d-wall-coastal-dormitory-deck.png"
     }
   ]
 }
