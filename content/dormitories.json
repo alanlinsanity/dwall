@@ -195,6 +195,37 @@
       ],
       "roomTypes": "12-Bed Ensuite",
       "lat": 1.3399033366228632
+    },
+    {
+      "yearBuilt": "2025",
+      "heroImage": "/content/uploads/hf_20260826_082214_5dcb5e36-0102-402b-851e-c86d3ac56549.png",
+      "lng": 103.934916,
+      "summary": "CR109 serves as a Construction Temporary Quarters (CTQ) for over 700 pax.",
+      "name": "CR109 Construction Temporary Quarters",
+      "mapQuery": "21A Tampines Ave 11, Singapore 529442",
+      "communalFacilities": [
+        "Hardcourt Facility",
+        "Vending Machines",
+        "Recreation Room",
+        "Communal Laundry Area",
+        "Catering Services"
+      ],
+      "beds": 712,
+      "status": "full",
+      "location": "Tampines",
+      "distance": "6 mins walk to Tampines North MRT",
+      "writeup": [
+        "Every room comes with ensuite toilet. The CTQ has hardcourt facility, recreation room (prayer room), communal laundry area, vending machines (bento for meal) and catering."
+      ],
+      "id": "cr109-ctq",
+      "availableBeds": 0,
+      "roomAmenities": [
+        "Ensuite Toilet",
+        "Bunk Beds",
+        "Personal Lockers"
+      ],
+      "roomTypes": "12-Bed Ensuite",
+      "lat": 1.3668342063003225
     }
   ]
 }
