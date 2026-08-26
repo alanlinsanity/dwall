@@ -21,10 +21,10 @@ window.CONTENT_READY.then(function(){
   const galleryHTML = `
     <div class="gallery bracket reveal">
       <span class="bl"></span><span class="br"></span>
-      <div class="main"><img src="${galleryImages[0]}" alt="${item.name}"></div>
+      <div class="main" data-gallery-open="0"><img src="${bustImg(galleryImages[0], 1200)}" alt="${item.name}" loading="eager" fetchpriority="high" decoding="async"></div>
       <div class="side">
-        <div><img src="${galleryImages[1] || galleryImages[0]}" alt="${item.name}"></div>
-        <div data-more="${extraCount > 0 ? "+" + extraCount + " more" : ""}"><img src="${galleryImages[2] || galleryImages[0]}" alt="${item.name}"></div>
+        <div data-gallery-open="1"><img src="${bustImg(galleryImages[1] || galleryImages[0], 500)}" alt="${item.name}" loading="lazy" decoding="async"></div>
+        <div data-gallery-open="2" data-more="${extraCount > 0 ? "View all " + galleryImages.length + " photos" : ""}"><img src="${bustImg(galleryImages[2] || galleryImages[0], 500)}" alt="${item.name}" loading="lazy" decoding="async"></div>
       </div>
     </div>`;
 
@@ -149,4 +149,49 @@ window.CONTENT_READY.then(function(){
   // DOMContentLoaded already ran the page's "fade in on scroll" setup once —
   // so that setup missed them. Re-run it now that they actually exist.
   initRevealOnScroll();
+
+  // ---- Full photo gallery lightbox: shows every photo, not just the 3 preview boxes ----
+  if(!document.getElementById("gallery-lightbox")){
+    const lb = document.createElement("div");
+    lb.className = "lightbox";
+    lb.id = "gallery-lightbox";
+    lb.innerHTML = `
+      <div class="lightbox-card gallery-lightbox-card">
+        <button type="button" class="lightbox-close" id="gallery-lightbox-close" aria-label="Close">✕</button>
+        <button type="button" class="gallery-lightbox-nav prev" id="gallery-lightbox-prev" aria-label="Previous photo">‹</button>
+        <img id="gallery-lightbox-img" alt="">
+        <button type="button" class="gallery-lightbox-nav next" id="gallery-lightbox-next" aria-label="Next photo">›</button>
+        <div class="gallery-lightbox-count" id="gallery-lightbox-count"></div>
+      </div>`;
+    document.body.appendChild(lb);
+  }
+  const lbEl = document.getElementById("gallery-lightbox");
+  const lbImg = document.getElementById("gallery-lightbox-img");
+  const lbCount = document.getElementById("gallery-lightbox-count");
+  let lbIndex = 0;
+
+  function showLbImage(i){
+    lbIndex = (i + galleryImages.length) % galleryImages.length;
+    lbImg.src = bustImg(galleryImages[lbIndex], 1600);
+    lbImg.alt = item.name;
+    lbCount.textContent = (lbIndex + 1) + " / " + galleryImages.length;
+  }
+  function openLightbox(i){
+    showLbImage(i);
+    lbEl.classList.add("open");
+  }
+  document.querySelectorAll("[data-gallery-open]").forEach(el=>{
+    el.style.cursor = "pointer";
+    el.addEventListener("click", ()=> openLightbox(parseInt(el.getAttribute("data-gallery-open"), 10) || 0));
+  });
+  document.getElementById("gallery-lightbox-close").onclick = () => lbEl.classList.remove("open");
+  document.getElementById("gallery-lightbox-prev").onclick = () => showLbImage(lbIndex - 1);
+  document.getElementById("gallery-lightbox-next").onclick = () => showLbImage(lbIndex + 1);
+  lbEl.addEventListener("click", (e)=>{ if(e.target === lbEl) lbEl.classList.remove("open"); });
+  document.addEventListener("keydown", (e)=>{
+    if(!lbEl.classList.contains("open")) return;
+    if(e.key === "Escape") lbEl.classList.remove("open");
+    if(e.key === "ArrowLeft") showLbImage(lbIndex - 1);
+    if(e.key === "ArrowRight") showLbImage(lbIndex + 1);
+  });
 });
