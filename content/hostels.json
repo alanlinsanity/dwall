@@ -77,7 +77,7 @@
         "Laundry",
         "Selection of Ensuite Rooms"
       ],
-      "lng": 103.883,
+      "lng": 103.834897,
       "summary": "Our upscale hostel asset, popular with tourist exploring Singapore and visiting for MICE.",
       "name": "Futura Boutique Hostel",
       "mapQuery": "Outram, Singapore",
@@ -88,7 +88,7 @@
       ],
       "website": "https://twlhospitality.com",
       "id": "futura-boutique-hostel",
-      "lat": 1.314
+      "lat": 1.2850693663215962
     },
     {
       "heroImage": "/content/uploads/shh.jpg",
