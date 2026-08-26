@@ -126,6 +126,44 @@
       "videoTourUrl": "",
       "roomTypes": "12 to 20 pax rooms",
       "lat": 1.3369518984008721
+    },
+    {
+      "yearBuilt": "2025",
+      "heroImage": "/content/uploads/hf_20260826_032205_15b4873c-4d3b-49ed-8fcf-828a19d8fac6.png",
+      "lng": 103.731056,
+      "summary": "Built for workers in the process industry, with close proximity to the recreation centre.",
+      "name": "ASPRI-D WALL Papan Dormitory",
+      "mapQuery": "2G Jalan Papan",
+      "communalFacilities": [
+        "Multi-Purpose Court",
+        "Carpark",
+        "Gym"
+      ],
+      "beds": 1200,
+      "gallery": [
+        "/content/uploads/hf_20260826_031224_45dabfa2-3e32-47c3-88c4-74bc932bb7b6.png",
+        "/content/uploads/hf_20260826_031305_1cbf1f33-62a7-4b71-954c-03a22e536b04.png",
+        "/content/uploads/hf_20260826_032205_54ada29b-1211-428a-827d-ddba7c838e9b.png",
+        "/content/uploads/hf_20260826_032507_a26e1598-0f64-4b88-b81f-fc371f515610.png",
+        "/content/uploads/hf_20260826_032419_498f818c-8969-4054-a2ce-1559d602a619.png"
+      ],
+      "status": "waitlist",
+      "location": "Jalan Papan",
+      "distance": "10 minutes to Jurong East",
+      "writeup": [
+        "At ASPRI-DWALL Papan, we provide modern and well-designed accommodation for foreign workers, offering a safe, secure and supportive living environment. Strategically located just a 15-minute drive to Jurong Island, with less than a 7-minute walk to Terusan Recreation Centre and under 5 minutes to ASPRI Integrated Training Centre, the dormitory ensures minimal travel time and greater convenience for both work and daily living."
+      ],
+      "id": "aspri-dwall-papan",
+      "availableBeds": 0,
+      "roomAmenities": [
+        "Ensuite Toilets",
+        "Ensuite Kitchen",
+        "Laundry Area",
+        "Personal Locker",
+        "Bunk Beds"
+      ],
+      "roomTypes": "12-Bed Ensuite",
+      "lat": 1.3220841970219692
     }
   ]
 }
