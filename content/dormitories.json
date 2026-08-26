@@ -170,7 +170,7 @@
       "yearBuilt": "2025",
       "heroImage": "/content/uploads/whatsapp-image-2026-08-26-at-15.46.20.jpeg",
       "lng": 103.79529,
-      "summary": "CR202 and CR203 are temporary dormitories on site running as Temporary Occupation Licence Quarters. Rooms are ensuite with toilets and comes with laundry facilities, canteen and hard court. No cooking allowed on site.",
+      "summary": "CR202 and CR203 are temporary dormitories on site running as Temporary Occupation Licence Quarters. ",
       "name": "CR202 & CR203 Temporary Occupation Licence Quarters",
       "mapQuery": "250A Turf Club Road",
       "communalFacilities": [
@@ -179,8 +179,12 @@
         "Hard Court"
       ],
       "beds": 599,
+      "gallery": [],
       "status": "full",
       "location": "Turf Club Road",
+      "writeup": [
+        "Rooms are ensuite with toilets and comes with laundry facilities, canteen and hard court. No cooking allowed on site."
+      ],
       "id": "cr202-cr203-tolq",
       "availableBeds": 0,
       "roomAmenities": [
