@@ -18,8 +18,8 @@ backend:
 media_folder: "content/uploads"
 public_folder: "/content/uploads"
 
-site_url: https://dwall.sg
-display_url: https://dwall.sg
+site_url: https://dwall.com.sg
+display_url: https://dwall.com.sg
 logo_url: /assets/logo.png
 
 collections:
