@@ -5,8 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Past Projects | D Wall</title>
 <meta name="description" content="A look at D Wall's development track record — ground-up builds, refurbishments and adaptive reuse projects.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Past Projects | D Wall">
+<meta property="og:description" content="A look at D Wall's development track record — ground-up builds, refurbishments and adaptive reuse projects.">
+<meta property="og:image" content="https://dwall.com.sg/assets/social-share.png">
+<meta property="og:url" content="https://dwall.com.sg/past-projects">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Past Projects | D Wall">
+<meta name="twitter:description" content="A look at D Wall's development track record — ground-up builds, refurbishments and adaptive reuse projects.">
+<meta name="twitter:image" content="https://dwall.com.sg/assets/social-share.png">
 <link rel="icon" type="image/png" href="assets/logo.png">
-<link rel="stylesheet" href="css/styles.css?v=12">
+<link rel="stylesheet" href="css/styles.css?v=22">
 </head>
 <body>
 
@@ -72,9 +81,9 @@
       <div class="footer-col">
         <h4>Get in touch</h4>
         <div class="footer-links">
-          <a href="tel:+6562995880">+65 6299 5880</a>
-          <a href="mailto:janell@dwall.sg">janell@dwall.sg</a>
-          <span class="footer-meta">18 Verdun Road #05-01 Singapore 2072800</span>
+          <a href="tel:+6560000000">+65 6000 0000</a>
+          <a href="mailto:janell@dwall.com.sg">janell@dwall.com.sg</a>
+          <span class="footer-meta">18 Verdun Road #05-01 Singapore 207280</span>
         </div>
       </div>
     </div>
@@ -91,9 +100,9 @@
   </div>
 </div>
 
-<script src="js/site-config.js?v=11"></script>
-<script src="js/load-content.js?v=11"></script>
-<script src="js/main.js?v=11"></script>
+<script src="js/site-config.js?v=22"></script>
+<script src="js/load-content.js?v=22"></script>
+<script src="js/main.js?v=22"></script>
 <script>
 window.CONTENT_READY.then(function(){
   const tags = ["All", ...new Set(PROJECTS.map(p => p.tag))];
@@ -117,7 +126,7 @@ window.CONTENT_READY.then(function(){
     document.getElementById("project-grid").innerHTML = items.map(p => `
       <div class="card project-card" data-open="${p.id}" style="cursor:pointer;">
         <div class="thumb">
-          <img src="${bustImg(p.image)}" alt="${p.name}">
+          <img src="${bustImg(p.image, 800)}" alt="${p.name}" loading="lazy" decoding="async">
           <span class="pin">${p.year}</span>
         </div>
         <div class="body">
@@ -136,7 +145,7 @@ window.CONTENT_READY.then(function(){
     const p = PROJECTS.find(x => x.id === id);
     if(!p) return;
     document.getElementById("lightbox-inner").innerHTML = `
-      <img src="${bustImg(p.image)}" alt="${p.name}">
+      <img src="${bustImg(p.image, 800)}" alt="${p.name}" loading="lazy" decoding="async">
       <div class="inner">
         <span class="index-label">${p.tag} · ${p.year}</span>
         <h2 style="margin-top:12px;">${p.name}</h2>

@@ -5,8 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Team | D Wall</title>
 <meta name="description" content="Meet the team behind D Wall's dormitory operations and TWL Hospitality's hostel portfolio.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Our Team | D Wall">
+<meta property="og:description" content="Meet the team behind D Wall's dormitory operations and TWL Hospitality's hostel portfolio.">
+<meta property="og:image" content="https://dwall.com.sg/assets/social-share.png">
+<meta property="og:url" content="https://dwall.com.sg/team">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Team | D Wall">
+<meta name="twitter:description" content="Meet the team behind D Wall's dormitory operations and TWL Hospitality's hostel portfolio.">
+<meta name="twitter:image" content="https://dwall.com.sg/assets/social-share.png">
 <link rel="icon" type="image/png" href="assets/logo.png">
-<link rel="stylesheet" href="css/styles.css?v=12">
+<link rel="stylesheet" href="css/styles.css?v=22">
 </head>
 <body>
 
@@ -53,9 +62,9 @@
         <h2 style="margin-top:14px;">Want to speak with our team directly?</h2>
         <p style="margin-top:14px;">Reach out and we'll connect you with the right person, whether it's leasing, operations, or a media enquiry.</p>
         <ul class="contact-list">
-          <li><b>Enquiries</b> janell@dwall.sg</li>
-          <li><b>Phone</b> +65 6299 5880</li>
-          <li><b>Office</b>18 Verdun Road #05-01 Singapore 207280</li>
+          <li><b>Enquiries</b> janell@dwall.com.sg</li>
+          <li><b>Phone</b> +65 6000 0000</li>
+          <li><b>Office</b> 18 Verdun Road #05-01 Singapore 207280</li>
         </ul>
       </div>
       <div class="form-card">
@@ -106,8 +115,8 @@
       <div class="footer-col">
         <h4>Get in touch</h4>
         <div class="footer-links">
-          <a href="tel:+6562995880">+65 6299 5880</a>
-          <a href="mailto:janell@dwall.sg">janell@dwall.sg</a>
+          <a href="tel:+6560000000">+65 6000 0000</a>
+          <a href="mailto:janell@dwall.com.sg">janell@dwall.com.sg</a>
           <span class="footer-meta">18 Verdun Road #05-01 Singapore 207280</span>
         </div>
       </div>
@@ -118,15 +127,15 @@
   </div>
 </footer>
 
-<script src="js/site-config.js?v=11"></script>
-<script src="js/load-content.js?v=11"></script>
-<script src="js/main.js?v=11"></script>
+<script src="js/site-config.js?v=22"></script>
+<script src="js/load-content.js?v=22"></script>
+<script src="js/main.js?v=22"></script>
 <script>
 window.CONTENT_READY.then(function(){
   function teamCardHTML(m){
     return `<div class="card team-card">
       <div class="body" style="align-items:center;">
-        <div class="photo"><img src="${bustImg(m.photo)}" alt="${m.name}"></div>
+        <div class="photo"><img src="${bustImg(m.photo, 300)}" alt="${m.name}" loading="lazy" decoding="async"></div>
         <h3>${m.name}</h3>
         <span class="role">${m.role}</span>
         <p class="bio">${m.bio}</p>
