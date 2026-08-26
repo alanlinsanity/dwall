@@ -6,7 +6,7 @@
 <title>D Wall — Purpose-Built Worker Dormitories, Singapore</title>
 <meta name="description" content="D Wall develops and operates purpose-built dormitories for Singapore's workforce, with affiliated backpacker hostels under TWL Hospitality.">
 <link rel="icon" type="image/png" href="assets/logo.png">
-<link rel="stylesheet" href="css/styles.css?v=14">
+<link rel="stylesheet" href="css/styles.css?v=20">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 </head>
 <body>
@@ -51,11 +51,9 @@
     </div>
 
     <div class="hero-stats-bar">
-      <div class="hero-stat-inline"><span class="num">5</span><span class="cap">Dwall Dormitories</span></div>
-      <div class="hero-stat-inline"><span class="num">10,000+</span><span class="cap">Dorm Beds</span></div>
-      <div class="hero-stat-inline"><span class="num">5</span><span class="cap">TWL Hospitality Hostels</span></div>
-      <div class="hero-stat-inline"><span class="num">300+</span><span class="cap">Hostel Beds</span></div>
-
+      <div class="hero-stat-inline"><span class="num">3</span><span class="cap">Dormitories operated</span></div>
+      <div class="hero-stat-inline"><span class="num">10,500+</span><span class="cap">Beds under management</span></div>
+      <div class="hero-stat-inline"><span class="num">4</span><span class="cap">TWL Hospitality hostels</span></div>
     </div>
   </div>
 </header>
@@ -171,8 +169,8 @@
         <p style="margin-top:14px;">Tell us your headcount, preferred region and move-in timeline, and our leasing team will get back to you within one working day.</p>
         <ul class="contact-list">
           <li><b>Enquiries</b> <a href="mailto:janell@dwall.sg" style="color:inherit;">janell@dwall.sg</a></li>
-          <li><b>Phone</b> <a href="tel:+6562995880" style="color:inherit;">+65 6299 5880</a></li>
-          <li><b>Office</b>18 Verdun Road #05-01 Singapore 207280</li>
+          <li><b>Phone</b> <a href="tel:+6560000000" style="color:inherit;">+65 6000 0000</a></li>
+          <li><b>Office</b> 18 Verdun Road #05-01 Singapore 207280</li>
         </ul>
       </div>
       <div class="form-card">
@@ -229,7 +227,7 @@
       <div class="footer-col">
         <h4>Get in touch</h4>
         <div class="footer-links">
-          <a href="tel:+6562995880">+65 6299 5880</a>
+          <a href="tel:+6560000000">+65 6000 0000</a>
           <a href="mailto:janell@dwall.sg">janell@dwall.sg</a>
           <span class="footer-meta">18 Verdun Road #05-01 Singapore 207280</span>
         </div>
@@ -241,15 +239,15 @@
   </div>
 </footer>
 
-<script src="js/site-config.js?v=14"></script>
-<script src="js/load-content.js?v=14"></script>
-<script src="js/main.js?v=14"></script>
+<script src="js/site-config.js?v=20"></script>
+<script src="js/load-content.js?v=20"></script>
+<script src="js/main.js?v=20"></script>
 <script>
 window.CONTENT_READY.then(function(){
   function dormCardHTML(d, i){
     return `<a class="card" href="detail.html?type=dormitory&id=${d.id}">
       <div class="thumb">
-        <img src="${bustImg(d.heroImage)}" alt="${d.name}">
+        <img src="${bustImg(d.heroImage, 800)}" alt="${d.name}" loading="lazy" decoding="async">
         <span class="pin">${d.location}</span>
       </div>
       <div class="body">
@@ -267,7 +265,7 @@ window.CONTENT_READY.then(function(){
   function projectCardHTML(p){
     return `<div class="card project-card">
       <div class="thumb">
-        <img src="${bustImg(p.image)}" alt="${p.name}">
+        <img src="${bustImg(p.image, 800)}" alt="${p.name}" loading="lazy" decoding="async">
         <span class="pin">${p.year}</span>
       </div>
       <div class="body">
@@ -288,8 +286,8 @@ window.CONTENT_READY.then(function(){
   document.getElementById("dorm-grid").innerHTML = DORMITORIES.map(dormCardHTML).join("");
   document.getElementById("project-grid").innerHTML = PROJECTS.slice(0,3).map(projectCardHTML).join("");
   document.getElementById("trust-grid").innerHTML = TRUST_POINTS.map(trustItemHTML).join("");
-  document.getElementById("hostel-photo-grid").innerHTML = HOSTELS.slice(0,4).map(h =>
-    `<a href="detail.html?type=hostel&id=${h.id}" class="hostel-photo"><img src="${bustImg(h.heroImage)}" alt="${h.name}"></a>`
+  document.getElementById("hostel-photo-grid").innerHTML = HOSTELS.slice(0,5).map(h =>
+    `<a href="detail.html?type=hostel&id=${h.id}" class="hostel-photo"><img src="${bustImg(h.heroImage, 500)}" alt="${h.name}" loading="lazy" decoding="async"></a>`
   ).join("");
 
   // ---- Hero image slider (fills the space next to the hero copy) ----
@@ -305,7 +303,7 @@ window.CONTENT_READY.then(function(){
     if(!slidesEl || !images.length) return;
 
     slidesEl.innerHTML = images.map((src, i) =>
-      `<img src="${bustImg(src)}" alt="D Wall dormitory photo" class="hero-slide${i === 0 ? " active" : ""}">`
+      `<img src="${bustImg(src, 1600)}" alt="D Wall dormitory photo" class="hero-slide${i === 0 ? " active" : ""}" ${i === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">`
     ).join("");
     dotsEl.innerHTML = images.map((_, i) =>
       `<button type="button" class="hero-slider-dot${i === 0 ? " active" : ""}" aria-label="Slide ${i + 1}"></button>`
@@ -336,6 +334,6 @@ window.CONTENT_READY.then(function(){
 }); // end CONTENT_READY.then
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="js/site-map.js?v=14"></script>
+<script src="js/site-map.js?v=20"></script>
 </body>
 </html>
