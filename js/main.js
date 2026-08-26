@@ -48,10 +48,10 @@ function availabilityBadgeHTML(status){
 // footer, and the floating quick-contact button. Update these once
 // and every page picks them up.
 const CONTACT_INFO = {
-  phone: "+65 6000 0000",
-  phoneHref: "tel:+6560000000",
+  phone: "+65 6299 5880",
+  phoneHref: "tel:+6562995880",
   email: "janell@dwall.com.sg",
-  whatsapp: "" // add your WhatsApp Business number (e.g. "6580001234") to enable the WhatsApp option below
+  whatsapp: "6583212525" // add your WhatsApp Business number (e.g. "6580001234") to enable the WhatsApp option below
 };
 
 // Injects a fixed, bottom-right "quick contact" button on every page
