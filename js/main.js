@@ -50,7 +50,7 @@ function availabilityBadgeHTML(status){
 const CONTACT_INFO = {
   phone: "+65 6000 0000",
   phoneHref: "tel:+6560000000",
-  email: "enquiries@dwall.sg",
+  email: "janell@dwall.com.sg",
   whatsapp: "" // add your WhatsApp Business number (e.g. "6580001234") to enable the WhatsApp option below
 };
 
