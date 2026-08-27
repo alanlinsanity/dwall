@@ -51,7 +51,7 @@ const CONTACT_INFO = {
   phone: "+65 6299 5880",
   phoneHref: "tel:+6562995880",
   email: "janell@dwall.com.sg",
-  whatsapp: "6583212525" // add your WhatsApp Business number (e.g. "6580001234") to enable the WhatsApp option below
+  whatsapp: "" // add your WhatsApp Business number (e.g. "6580001234") to enable the WhatsApp option below
 };
 
 // Injects a fixed, bottom-right "quick contact" button on every page
@@ -73,7 +73,7 @@ function initQuickContact(){
       <a href="${CONTACT_INFO.phoneHref}" class="qc-option qc-call"><span class="qc-label">Call ${CONTACT_INFO.phone}</span></a>
       <a href="mailto:${CONTACT_INFO.email}" class="qc-option qc-email"><span class="qc-label">Email us</span></a>
       ${waLink}
-      <a href="index.html#contact" class="qc-option qc-form"><span class="qc-label">Send an enquiry</span></a>
+      <a href="/#contact" class="qc-option qc-form"><span class="qc-label">Send an enquiry</span></a>
     </div>
     <button type="button" class="qc-toggle" aria-label="Contact us">
       <span class="qc-icon-open">Contact us</span>
@@ -129,7 +129,12 @@ function initEnquiryForms(){
 }
 
 function setActiveNav(){
-  const path = window.location.pathname.split("/").pop() || "index.html";
+  // Normalize both clean URLs (e.g. "/past-projects") and legacy .html
+  // URLs (e.g. "/past-projects.html") to the same "page.html" form the
+  // nav's data-nav attributes use, so highlighting works either way.
+  let path = window.location.pathname.split("/").pop() || "";
+  if(path === "") path = "index.html";
+  else if(!path.includes(".")) path += ".html";
   document.querySelectorAll(".nav-links > a[data-nav]").forEach(a=>{
     if(a.getAttribute("data-nav") === path) a.classList.add("active");
   });
