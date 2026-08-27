@@ -6,12 +6,12 @@ window.CONTENT_READY.then(function(){
   const root = document.getElementById("detail-root");
 
   if(!item){
-    root.innerHTML = `<div class="page-hero"><h1>We couldn't find that listing.</h1><p class="lead"><a href="index.html">Back to homepage</a></p></div>`;
+    root.innerHTML = `<div class="page-hero"><h1>We couldn't find that listing.</h1><p class="lead"><a href="/">Back to homepage</a></p></div>`;
     return;
   }
 
   document.title = item.name + " — D Wall";
-  const backHref = type === "hostel" ? "hospitality.html" : "index.html#dormitories";
+  const backHref = type === "hostel" ? "/hospitality" : "/#dormitories";
   const backLabel = type === "hostel" ? "Other Accommodations" : "Dormitories";
 
   // ---- Gallery (dormitories ship with a gallery array; hostels use heroImage twice as a graceful fallback) ----
@@ -119,7 +119,7 @@ window.CONTENT_READY.then(function(){
         <h1 style="margin-top:10px; font-size:clamp(1.8rem,3.4vw,2.6rem);">${item.name}</h1>
         <div class="detail-loc">📍 ${item.location}</div>
       </div>
-      <a href="${type === "hostel" ? "index.html#contact" : "#enquire"}" class="btn btn-outline">${type === "hostel" ? "Enquire now" : "Check availability"}</a>
+      <a href="${type === "hostel" ? "/#contact" : "#enquire"}" class="btn btn-outline">${type === "hostel" ? "Enquire now" : "Check availability"}</a>
     </div>
 
     ${galleryHTML}
