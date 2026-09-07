@@ -1,0 +1,39 @@
+# D Wall — robots.txt
+# Deliberately permissive: we want both traditional search engines and
+# AI/answer-engine crawlers (the systems behind tools like ChatGPT,
+# Claude, Perplexity, and Google's AI features) to be able to read and
+# cite this site. If you ever want to block a specific bot, add a
+# "User-agent: <bot name>" + "Disallow: /" block for it above the
+# catch-all rule below.
+
+User-agent: *
+Allow: /
+
+# Common AI/LLM crawlers — listed explicitly so it's clear they're
+# welcome here, in case a future change to the catch-all rule above
+# ever narrows access.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://dwall.com.sg/sitemap.xml
