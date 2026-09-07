@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  IMPORTANT: this list must match your CURRENT real listings.
+  The dormitory/hostel URLs below use PLACEHOLDER ids as an example —
+  replace them with your actual current listing ids from
+  content/dormitories.json and content/hostels.json (the "id" field
+  of each entry). Update this file again whenever you add, remove,
+  or rename a listing.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://dwall.com.sg/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/hospitality</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/past-projects</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/team</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Dormitory listings — replace ids with your real current ones -->
+  <url>
+    <loc>https://dwall.com.sg/detail?type=dormitory&amp;id=tuas-seatown-dormitory</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/detail?type=dormitory&amp;id=tannery-lodge</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/detail?type=dormitory&amp;id=shaw-road-dormitory</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/detail?type=dormitory&amp;id=aspri-dwall-papan</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/detail?type=dormitory&amp;id=cr202-cr203-tolq</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/detail?type=dormitory&amp;id=cr109-ctq</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Hostel listings — replace ids with your real current ones -->
+  <url>
+    <loc>https://dwall.com.sg/detail?type=hostel&amp;id=beary-best-chinatown</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/detail?type=hostel&amp;id=beary-best-kampong-glam</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/detail?type=hostel&amp;id=beary-best-lavender</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/detail?type=hostel&amp;id=futura-boutique-hostel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dwall.com.sg/detail?type=hostel&amp;id=straits-heritage-hostel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
