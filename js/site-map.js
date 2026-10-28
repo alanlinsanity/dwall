@@ -4,7 +4,8 @@ window.CONTENT_READY.then(function(){
 
   const map = L.map("site-map", {
     scrollWheelZoom: false,
-    zoomControl: true
+    zoomControl: true,
+    zoomSnap: 0.5
   }).setView([1.345, 103.79], 11);
 
   // Keyless basemap (standard OpenStreetMap tiles, no API key needed).
@@ -69,6 +70,8 @@ window.CONTENT_READY.then(function(){
   if(typeof HOSTELS !== "undefined") HOSTELS.forEach(h => addPin(h, "hostel"));
 
   if(bounds.length){
-    map.fitBounds(bounds, { padding: [36, 36], maxZoom: 12 });
+    map.fitBounds(bounds, { padding: [20, 20], maxZoom: 13 });
+    // nudge in one extra step (change 1 to 0.5 or 2 to taste)
+    map.setZoom(map.getZoom() + 1);
   }
 });
